@@ -1,4 +1,8 @@
 {
+    "title": "Qcanvas使用文档",
+    "description": "Qcanvas使用文档",
+    "author": "lizhicheng",
+    "output.name": "docs",
     "plugins": [
          "expandable-chapters-small",
          "tbfed-pagefooter",
