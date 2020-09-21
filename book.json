@@ -1,13 +1,19 @@
 {
     "plugins": [
          "expandable-chapters-small",
-         "tbfed-pagefooter"
+         "tbfed-pagefooter",
+         "code",
+         "sidebar-style"
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {
           "copyright":"&copy Qcanvas",
           "modify_label": "文件修订时间：",
           "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "sidebar-style": {
+            "title": "前端开发",
+            "author": "志成"
         }
     }
 }
