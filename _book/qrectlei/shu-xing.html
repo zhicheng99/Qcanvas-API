@@ -76,7 +76,7 @@
     <link rel="next" href="fang-fa.html" />
     
     
-    <link rel="prev" href="../qlinelei.html" />
+    <link rel="prev" href="../qrectlei.html" />
     
 
     </head>
@@ -222,9 +222,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="shu-xing.html">
+        <li class="chapter " data-level="1.4.1" data-path="../qlinelei/shu-xing.html">
             
-                <a href="shu-xing.html">
+                <a href="../qlinelei/shu-xing.html">
             
                     
                     属性
@@ -235,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="fang-fa.html">
+        <li class="chapter " data-level="1.4.2" data-path="../qlinelei/fang-fa.html">
             
-                <a href="fang-fa.html">
+                <a href="../qlinelei/fang-fa.html">
             
                     
                     方法
@@ -267,9 +267,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../qrectlei/shu-xing.html">
+        <li class="chapter active" data-level="1.5.1" data-path="shu-xing.html">
             
-                <a href="../qrectlei/shu-xing.html">
+                <a href="shu-xing.html">
             
                     
                     属性
@@ -280,9 +280,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../qrectlei/fang-fa.html">
+        <li class="chapter " data-level="1.5.2" data-path="fang-fa.html">
             
-                <a href="../qrectlei/fang-fa.html">
+                <a href="fang-fa.html">
             
                     
                     方法
@@ -677,139 +677,174 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>qlineVersion</td>
+<td>qrectVersion</td>
 <td>String</td>
 <td>&#x5426;&#xFF08;&#x81EA;&#x52A8;&#x751F;&#x6210;&#xFF09;</td>
-<td>Qline&#x7C7B;&#x7248;&#x672C;&#x53F7;</td>
+<td>Qrect&#x7C7B;&#x7248;&#x672C;&#x53F7;</td>
 </tr>
 <tr>
 <td>2</td>
 <td>qcanvas</td>
 <td>Object</td>
 <td>&#x5426;&#xFF08;&#x81EA;&#x52A8;&#x751F;&#x6210;&#xFF09;</td>
-<td>&#x4E3B;&#x7C7B;Qcanvas&#x7684;&#x5B9E;&#x4F8B;</td>
+<td>Qcanvas&#x7C7B;&#x5B9E;&#x4F8B;</td>
 </tr>
 <tr>
 <td>3</td>
 <td>TYPE</td>
 <td>String</td>
 <td>&#x5426;&#xFF08;&#x81EA;&#x52A8;&#x751F;&#x6210;&#xFF09;</td>
-<td>&#x7EBF;&#x6BB5;&#x7C7B;&#x578B;&#x6807;&#x8BB0; &apos;line&apos; &#xFF08;&#x6CE8;&#xFF1A;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#xFF09;</td>
+<td>&#x77E9;&#x5F62;&#x7C7B;&#x578B;&#x6807;&#x8BB0; &apos;rect&apos; &#xFF08;&#x6CE8;&#xFF1A;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#xFF09;</td>
 </tr>
 <tr>
 <td>4</td>
-<td>start</td>
-<td>Array Or Fun</td>
+<td>lineWidth</td>
+<td>Number</td>
 <td>&#x5426;</td>
-<td>&#x7EBF;&#x6BB5;&#x7684;&#x5F00;&#x59CB;&#x5750;&#x6807;</td>
+<td>&#x77E9;&#x5F62;&#x8FB9;&#x7EBF;&#x7C97;&#x7EC6;</td>
 </tr>
 <tr>
 <td>5</td>
-<td>end</td>
+<td>start</td>
 <td>Array Or Fun</td>
 <td>&#x5426;</td>
-<td>&#x7EBF;&#x6BB5;&#x7684;&#x7ED3;&#x675F;&#x5750;&#x6807;</td>
+<td>&#x77E9;&#x5F62;&#x5DE6;&#x4E0A;&#x89D2;&#x5750;&#x6807;</td>
 </tr>
 <tr>
 <td>6</td>
-<td>color</td>
-<td>String</td>
+<td>width</td>
+<td>Number Or Fun</td>
 <td>&#x5426;</td>
-<td>&#x7EBF;&#x7684;&#x989C;&#x8272;</td>
+<td>&#x77E9;&#x5F62;&#x5BBD;</td>
 </tr>
 <tr>
 <td>7</td>
-<td>like</td>
-<td>String</td>
+<td>height</td>
+<td>Number Or Fun</td>
 <td>&#x5426;</td>
-<td>&#x7EBF;&#x7684;&#x6837;&#x5F0F;</td>
+<td>&#x77E9;&#x5F62;&#x9AD8;</td>
 </tr>
 <tr>
 <td>8</td>
-<td>width</td>
-<td>Number</td>
+<td>borderColor</td>
+<td>String</td>
 <td>&#x5426;</td>
-<td>&#x7EBF;&#x7684;&#x7C97;&#x7EC6;</td>
+<td>&#x77E9;&#x5F62;&#x8FB9;&#x7EBF;&#x989C;&#x8272;</td>
 </tr>
 <tr>
 <td>9</td>
-<td>withText</td>
+<td>fillColor</td>
 <td>String</td>
 <td>&#x5426;</td>
-<td>&#x7EBF;&#x5E26;&#x7740;&#x7684;&#x6587;&#x672C;</td>
+<td>&#x77E9;&#x5F62;&#x586B;&#x5145;&#x989C;&#x8272;</td>
 </tr>
 <tr>
 <td>10</td>
-<td>withTextAlign</td>
-<td>String</td>
-<td>&#x5426;</td>
-<td>&#x7EBF;&#x5E26;&#x7740;&#x7684;&#x6587;&#x672C;&#x7684;&#x6A2A;&#x5411;&#x4F4D;&#x7F6E; [left center(&#x9ED8;&#x8BA4;) right]</td>
-</tr>
-<tr>
-<td>11</td>
 <td>drag</td>
 <td>String/Boolean</td>
 <td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x53EF;&#x62D6;&#x52A8;&#xFF08;true:&#x53EF;&#x62D6;&#x52A8;&#x3010;&#x9ED8;&#x8BA4;&#x3011;&#xFF0C;false:&#x4E0D;&#x53EF;&#x62D6;&#x52A8;&#xFF0C;&apos;vertical&apos;:&#x53EA;&#x53EF;&#x7AD6;&#x5411;&#x62D6;&#x52A8;&#xFF0C;&apos;Horizontal&apos;:&#x53EA;&#x53EF;&#x6A2A;&#x5411;&#x62D6;&#x52A8;&#xFF09;</td>
+<td>&#x662F;&#x5426;&#x53EF;&#x62D6;&#x52A8;&#xFF08;true:&#x53EF;&#x62D6;&#x52A8;&#x3010;&#x9ED8;&#x8BA4;&#x3011;&#xFF0C;false:&#x4E0D;&#x53EF;&#x62D6;&#x52A8;&#xFF0C;&apos;vertical&apos;:&#x53EA;&#x53EF;&#x7AD6;&#x5411;&#x62D6;&#x52A8;&#xFF0C;&apos;Horizontal&apos;:&#x53EF;&#x80FD;&#x6A2A;&#x5411;&#x62D6;&#x52A8;&#xFF09;</td>
 </tr>
 <tr>
-<td>12</td>
+<td>11</td>
 <td>pointerEvent</td>
 <td>String</td>
 <td>&#x5426;</td>
 <td>&#x662F;&#x5426;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#xFF08;&#x9ED8;&#x8BA4;&apos;auto&apos;:&#x54CD;&#x5E94;&#xFF0C;&apos;none&apos;:&#x4E0D;&#x54CD;&#x5E94;&#xFF09;</td>
 </tr>
 <tr>
-<td>13</td>
+<td>12</td>
 <td>mousedown</td>
 <td>Fun</td>
 <td>&#x5426;</td>
 <td>&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
-<td>14</td>
+<td>13</td>
 <td>mousemove</td>
 <td>Fun</td>
 <td>&#x5426;</td>
 <td>&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
-<td>15</td>
+<td>14</td>
 <td>mouseup</td>
 <td>Fun</td>
 <td>&#x5426;</td>
 <td>&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
-<td>16</td>
+<td>15</td>
 <td>mouseout</td>
 <td>Fun</td>
 <td>&#x5426;</td>
 <td>&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
-<td>17</td>
+<td>16</td>
 <td>touchstart</td>
 <td>Fun</td>
 <td>&#x5426;</td>
 <td>&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
-<td>18</td>
+<td>17</td>
 <td>touchmove</td>
 <td>Fun</td>
 <td>&#x5426;</td>
 <td>&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
-<td>19</td>
+<td>18</td>
 <td>touchend</td>
 <td>Fun</td>
 <td>&#x5426;</td>
 <td>&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
+<td>19</td>
+<td>opacity</td>
+<td>Number</td>
+<td>&#x5426;</td>
+<td>&#x586B;&#x5145;&#x8272;&#x900F;&#x660E;&#x5EA6;(&#x6700;&#x5927;&#x4E3A;1)</td>
+</tr>
+<tr>
 <td>20</td>
+<td>degree</td>
+<td>Number</td>
+<td>&#x5426;</td>
+<td>&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#xFF08;-360~360&#xFF09;</td>
+</tr>
+<tr>
+<td>21</td>
+<td>radius</td>
+<td>Number</td>
+<td>&#x5426;</td>
+<td>&#x5706;&#x89D2;&#x5EA6;&#x6570;</td>
+</tr>
+<tr>
+<td>22</td>
+<td>resize</td>
+<td>Boolean</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x542F;&#x7528;&#x7F29;&#x653E;&#x63A7;&#x4EF6;</td>
+</tr>
+<tr>
+<td>23</td>
+<td>rotate</td>
+<td>Boolean</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x542F;&#x7528;&#x89D2;&#x5EA6;&#x63A7;&#x5236;&#x63A7;&#x4EF6;</td>
+</tr>
+<tr>
+<td>24</td>
+<td>dashed</td>
+<td>Boolean</td>
+<td>&#x5426;</td>
+<td>&#x8FB9;&#x7EBF;&#x662F;&#x5426;&#x4E3A;&#x865A;&#x7EBF;</td>
+</tr>
+<tr>
+<td>25</td>
 <td>mouseenter</td>
 <td>Fun</td>
 <td>&#x5426;</td>
@@ -817,57 +852,53 @@
 </tr>
 </tbody>
 </table>
+<hr>
 <blockquote>
-<h5 id="1&#x3001;qlineversionstring">1&#x3001;qlineVersion(String)</h5>
-<p>Qline&#x7C7B;&#x7684;&#x7248;&#x672C;&#x53F7;<br>function Qline(qcanvas){<br>    <strong>this.qlineVersion = &apos;1.0&apos;;</strong><br>    this.qcanvas = qcanvas;<br>}</p>
+<h5 id="1&#x3001;qrectversionstring">1&#x3001;qrectVersion(String)</h5>
+<p>Qrect&#x7C7B;&#x7248;&#x672C;&#x53F7;<br>function Qrect(qcanvas){<br>    <strong>this.qrectVersion = &apos;1.0&apos;;</strong><br>    this.qcanvas = qcanvas;<br>}</p>
 </blockquote>
 <hr>
 <blockquote>
-<h5 id="2&#x3001;-qcanvasobject">2&#x3001; qcanvas(Object)</h5>
-<p>&#x4E3B;&#x7C7B;Qcanvas&#x7684;&#x5B9E;&#x4F8B;<br>function Qline(qcanvas){<br>    this.qlineVersion = &apos;1.0&apos;;<br>    <strong>this.qcanvas = qcanvas;</strong><br>}</p>
+<h5 id="2&#x3001;qcanvasobject">2&#x3001;qcanvas(Object)</h5>
+<p>Qcanvas&#x7C7B;&#x5B9E;&#x4F8B;<br>function Qrect(qcanvas){<br>    this.qrectVersion = &apos;1.0&apos;;<br>    <strong>this.qcanvas = qcanvas;</strong><br>}</p>
 </blockquote>
 <hr>
 <blockquote>
-<h5 id="3&#x3001;-typestring">3&#x3001; TYPE(String)</h5>
-<p>&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B; &#x7EBF;&#x4E3A;line, &#x4E0D;&#x53EF;&#x66F4;&#x6539;<br>&#x4E3A;&#x4E86;&#x753B;&#x5143;&#x7D20;&#x65F6;&#x4F5C;&#x8FA8;&#x522B;</p>
+<h5 id="3&#x3001;typestring">3&#x3001;TYPE(String)</h5>
+<p>&#x77E9;&#x5F62;&#x7C7B;&#x578B;&#x6807;&#x8BB0; &apos;rect&apos; ,&#x4E0D;&#x80FD;&#x66F4;&#x6539;</p>
 </blockquote>
 <hr>
 <blockquote>
-<h5 id="4&#x3001;-startarray-or-function">4&#x3001; start(Array Or Function)</h5>
-<p>&#x7EBF;&#x6BB5;&#x7684;&#x5F00;&#x59CB;&#x5750;&#x6807;</p>
+<h5 id="4&#x3001;linewidthobject">4&#x3001;lineWidth(Object)</h5>
+<p>&#x77E9;&#x5F62;&#x8FB9;&#x7EBF;&#x7C97;&#x7EC6;</p>
 </blockquote>
 <hr>
 <blockquote>
-<h5 id="5&#x3001;-endarray-or-function">5&#x3001; end(Array Or Function)</h5>
-<p>&#x7EBF;&#x6BB5;&#x7684;&#x7ED3;&#x675F;&#x5750;&#x6807;</p>
+<h5 id="5&#x3001;startarray-or-function">5&#x3001;start(Array Or Function)</h5>
+<p>&#x77E9;&#x5F62;&#x5DE6;&#x4E0A;&#x89D2;&#x5750;&#x6807;</p>
 </blockquote>
 <hr>
 <blockquote>
-<h5 id="6&#x3001;-colorstring">6&#x3001; color(String)</h5>
-<p>&#x7EBF;&#x6BB5;&#x7684;&#x989C;&#x8272;</p>
+<h5 id="6&#x3001;widthnumber-or-function">6&#x3001;width(Number Or Function)</h5>
+<p>&#x77E9;&#x5F62;&#x5BBD;</p>
 </blockquote>
 <hr>
 <blockquote>
-<h5 id="7&#x3001;-likestring">7&#x3001; like(String)</h5>
-<p>&#x7EBF;&#x7684;&#x6837;&#x5F0F;<br>&#x76EE;&#x524D;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x56DB;&#x79CD;&#xFF1A;<br>like:&apos;-&apos; //&#x5B9E;&#x7EBF;<br>like:&apos;-&gt;&apos; //&#x5B9E;&#x7EBF;&#x5E26;&#x7BAD;&#x5934;<br>like:&apos;--&apos; //&#x865A;&#x7EBF;<br>like:&apos;--&gt;&apos; //&#x865A;&#x7EBF;&#x5E26;&#x7BAD;&#x5934;<br>like:&apos;&lt;-&gt;&apos; //&#x5B9E;&#x7EBF;&#x53CC;&#x5411;&#x7BAD;&#x5934;<br>like:&apos;&lt;--&gt;&apos; //&#x865A;&#x7EBF;&#x53CC;&#x5411;&#x7BAD;&#x5934;</p>
+<h5 id="7&#x3001;heightnumber-or-function">7&#x3001;height(Number Or Function)</h5>
+<p>&#x77E9;&#x5F62;&#x9AD8;</p>
 </blockquote>
 <hr>
 <blockquote>
-<h5 id="8&#x3001;-widthnumber">8&#x3001; width(Number)</h5>
-<p>&#x7EBF;&#x6BB5;&#x7684;&#x7C97;&#x7EC6;</p>
+<h5 id="8&#x3001;bordercolorstring">8&#x3001;borderColor(String)</h5>
+<p>&#x77E9;&#x5F62;&#x8FB9;&#x7EBF;&#x989C;&#x8272;</p>
 </blockquote>
 <hr>
 <blockquote>
-<h5 id="9&#x3001;-withtextstring">9&#x3001; withText(String)</h5>
-<p>&#x7EBF;&#x5E26;&#x7740;&#x7684;&#x6587;&#x672C;</p>
-</blockquote>
-<hr>
-<blockquote>
-<h5 id="10&#x3001;-withtextalignstring">10&#x3001; withTextAlign(String)</h5>
-<p>&#x7EBF;&#x5E26;&#x7740;&#x7684;&#x6587;&#x672C;&#x7684;&#x6A2A;&#x5411;&#x4F4D;&#x7F6E; [left center(&#x9ED8;&#x8BA4;) right]</p>
+<h5 id="9&#x3001;fillcolorstring">9&#x3001;fillColor(String)</h5>
+<p>&#x77E9;&#x5F62;&#x586B;&#x5145;&#x989C;&#x8272;</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">&#xA9; Qcanvas all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-09-21 14:28:58
+2020-09-18 21:09:56
 </span></footer>
                                 
                                 </section>
@@ -895,7 +926,7 @@
 
             
                 
-                <a href="../qlinelei.html" class="navigation navigation-prev " aria-label="Previous page: Qline类">
+                <a href="../qrectlei.html" class="navigation navigation-prev " aria-label="Previous page: Qrect类">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -911,7 +942,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"属性","level":"1.4.1","depth":2,"next":{"title":"方法","level":"1.4.2","depth":2,"path":"qlinelei/fang-fa.md","ref":"qlinelei/fang-fa.md","articles":[]},"previous":{"title":"Qline类","level":"1.4","depth":1,"path":"qlinelei.md","ref":"qlinelei.md","articles":[{"title":"属性","level":"1.4.1","depth":2,"path":"qlinelei/shu-xing.md","ref":"qlinelei/shu-xing.md","articles":[]},{"title":"方法","level":"1.4.2","depth":2,"path":"qlinelei/fang-fa.md","ref":"qlinelei/fang-fa.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-small","tbfed-pagefooter","code","sidebar-style"],"pluginsConfig":{"sidebar-style":{"author":"志成","title":"前端开发"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"qlinelei/shu-xing.md","mtime":"2020-09-21T06:28:58.629Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-21T09:10:08.328Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"属性","level":"1.5.1","depth":2,"next":{"title":"方法","level":"1.5.2","depth":2,"path":"qrectlei/fang-fa.md","ref":"qrectlei/fang-fa.md","articles":[]},"previous":{"title":"Qrect类","level":"1.5","depth":1,"path":"qrectlei.md","ref":"qrectlei.md","articles":[{"title":"属性","level":"1.5.1","depth":2,"path":"qrectlei/shu-xing.md","ref":"qrectlei/shu-xing.md","articles":[]},{"title":"方法","level":"1.5.2","depth":2,"path":"qrectlei/fang-fa.md","ref":"qrectlei/fang-fa.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-small","tbfed-pagefooter","code","sidebar-style"],"pluginsConfig":{"sidebar-style":{"author":"志成","title":"前端开发"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"qrectlei/shu-xing.md","mtime":"2020-09-18T13:09:56.375Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-21T09:10:08.328Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
