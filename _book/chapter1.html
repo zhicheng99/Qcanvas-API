@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Qspirit类 · GitBook</title>
+        <title>Qcanvas类 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="qspiritlei/shu-xing.html" />
+    <link rel="next" href="chapter1/shu-xing.html" />
     
     
-    <link rel="prev" href="qimglei/fang-fa.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -118,7 +118,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+        <li class="chapter active" data-level="1.2" data-path="chapter1.html">
             
                 <a href="chapter1.html">
             
@@ -433,7 +433,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9" data-path="qspiritlei.html">
+        <li class="chapter " data-level="1.9" data-path="qspiritlei.html">
             
                 <a href="qspiritlei.html">
             
@@ -649,7 +649,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Qspirit类</a>
+        <a href="." >Qcanvas类</a>
     </h1>
 </div>
 
@@ -664,53 +664,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h5 id="&#x521B;&#x5EFA;spirit&#x5BF9;&#x8C61;">&#x521B;&#x5EFA;spirit&#x5BF9;&#x8C61;</h5>
-<pre><code>qcanvas.load({            
-                &quot;person&quot;:&quot;img/spirit1.png&quot;,
-            },function(){
-
-                    var spiritSource = qcanvas.getSourceByName(&quot;person&quot;); 
-
-                    qcanvas.qspirit.spirit({
-                        img:spiritSource,
-                        row:1,
-                        column:8,
-                        framesIndex:[0,0],
-                        tStart:[0,120],
-                        tWidth:40,
-                        tHeight:64,
-                        isLoop:true,
-                        during:1,
-                        degree:30,
-                        mouseup:function(){
-                            console.log(this);
-                            console.log(&apos;&#x89E6;&#x53D1;mouseup&#x4E8B;&#x4EF6;&apos;);
-                        }
-                    })
-
-
-            })
-</code></pre><pre><code>        &#x6216;
-
-        ```
-        qcanvas.qspirit.spirit({ 
-        img:&apos;img/spirit1.png&apos;,
-        row:1,
-        column:8,
-        framesIndex:[0,0],
-        tStart:[0,120],
-        tWidth:40,
-        tHeight:64,
-        isLoop:true,
-        during:1,
-        mouseup:function(){
-            console.log(this);
-            console.log(&apos;&#x89E6;&#x53D1;mouseup&#x4E8B;&#x4EF6;&apos;);
-        }
-    }) 
-        ```
+                                <h5 id="&#x6784;&#x9020;&#x51FD;&#x6570;&#x521D;&#x59CB;&#x5316;-new-qcanvas&#x753B;&#x5E03;id&#x5BBD;&#x9AD8;">&#x6784;&#x9020;&#x51FD;&#x6570;&#x521D;&#x59CB;&#x5316; new Qcanvas([&#x753B;&#x5E03;Id,&#x5BBD;,&#x9AD8;])</h5>
+<pre><code>&#x65B9;&#x6CD5;&#x4E00;&#x3001;
+var qcanvas = new Qcanvas([&quot;qcanvas&quot;,500,300]);
+&#x65B9;&#x6CD5;&#x4E8C;&#x3001;&#x589E;&#x52A0;&#x4E86;&#x4E8B;&#x4EF6;&#x7684;&#x914D;&#x7F6E;
+var qcanvas = new Qcanvas(
+{
+     id:&quot;qcanvas&quot;,
+     width:500,
+     height:300,
+    mousedown:function(){},
+    mousemove:function(){},
+    mouseup:function(){},
+    mouseout:function(){}
+    mouseenter:function(){}
+}
+);
 </code></pre><footer class="page-footer"><span class="copyright">&#xA9; Qcanvas all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-09-18 21:09:56
+2020-09-21 16:31:45
 </span></footer>
                                 
                                 </section>
@@ -738,12 +709,12 @@
 
             
                 
-                <a href="qimglei/fang-fa.html" class="navigation navigation-prev " aria-label="Previous page: 方法">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Qcanvas说明">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="qspiritlei/shu-xing.html" class="navigation navigation-next " aria-label="Next page: 属性">
+                <a href="chapter1/shu-xing.html" class="navigation navigation-next " aria-label="Next page: 属性">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -754,7 +725,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Qspirit类","level":"1.9","depth":1,"next":{"title":"属性","level":"1.9.1","depth":2,"path":"qspiritlei/shu-xing.md","ref":"qspiritlei/shu-xing.md","articles":[]},"previous":{"title":"方法","level":"1.8.2","depth":2,"path":"qimglei/fang-fa.md","ref":"qimglei/fang-fa.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-small","tbfed-pagefooter","code","sidebar-style"],"pluginsConfig":{"sidebar-style":{"author":"志成","title":"前端开发"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"qspiritlei.md","mtime":"2020-09-18T13:09:56.378Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-21T08:59:06.777Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Qcanvas类","level":"1.2","depth":1,"next":{"title":"属性","level":"1.2.1","depth":2,"path":"chapter1/shu-xing.md","ref":"chapter1/shu-xing.md","articles":[]},"previous":{"title":"Qcanvas说明","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-small","tbfed-pagefooter","code","sidebar-style"],"pluginsConfig":{"sidebar-style":{"author":"志成","title":"前端开发"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1.md","mtime":"2020-09-21T08:31:45.404Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-21T08:59:06.777Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
