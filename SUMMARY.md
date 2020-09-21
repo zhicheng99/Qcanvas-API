@@ -1,6 +1,6 @@
 # Summary
 
-* [说明](README.md)
+* [Qcanvas说明](README.md)
 * [Qcanvas类](chapter1.md)
   * [属性](chapter1/shu-xing.md)
   * [方法](chapter1/fang-fa.md)
