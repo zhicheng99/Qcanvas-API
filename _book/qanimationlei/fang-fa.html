@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>属性 · Qcanvas使用文档</title>
+        <title>方法 · Qcanvas使用文档</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,10 +77,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="fang-fa.html" />
+    <link rel="next" href="../qimglei.html" />
     
     
-    <link rel="prev" href="../chapter1.html" />
+    <link rel="prev" href="shu-xing.html" />
     
 
     </head>
@@ -136,9 +136,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="shu-xing.html">
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/shu-xing.html">
             
-                <a href="shu-xing.html">
+                <a href="../chapter1/shu-xing.html">
             
                     
                     属性
@@ -149,9 +149,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="fang-fa.html">
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/fang-fa.html">
             
-                <a href="fang-fa.html">
+                <a href="../chapter1/fang-fa.html">
             
                     
                     方法
@@ -361,9 +361,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../qanimationlei/shu-xing.html">
+        <li class="chapter " data-level="1.7.1" data-path="shu-xing.html">
             
-                <a href="../qanimationlei/shu-xing.html">
+                <a href="shu-xing.html">
             
                     
                     属性
@@ -374,9 +374,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../qanimationlei/fang-fa.html">
+        <li class="chapter active" data-level="1.7.2" data-path="fang-fa.html">
             
-                <a href="../qanimationlei/fang-fa.html">
+                <a href="fang-fa.html">
             
                     
                     方法
@@ -653,7 +653,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >属性</a>
+        <a href=".." >方法</a>
     </h1>
 </div>
 
@@ -673,113 +673,83 @@
 <tr>
 <th>&#x5E8F;&#x53F7;</th>
 <th>&#x540D;&#x79F0;</th>
-<th>&#x7C7B;&#x578B;</th>
 <th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>qcanvasVersion</td>
-<td>String</td>
-<td>Qcanvas&#x7C7B;&#x7248;&#x672C;&#x53F7;</td>
+<td>animate</td>
+<td>&#x4E3A;&#x5BF9;&#x8C61;&#x751F;&#x6210;animation&#x5C5E;&#x6027;</td>
 </tr>
 <tr>
 <td>2</td>
-<td>context</td>
-<td>Object</td>
-<td>&#x753B;&#x5E03;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;</td>
-</tr>
-<tr>
-<td>3</td>
-<td>stage</td>
-<td>Object</td>
-<td>&#x62BD;&#x8C61;&#x51FA;&#x6765;&#x7684;&#x821E;&#x53F0;&#x5BF9;&#x8C61;</td>
-</tr>
-<tr>
-<td>4</td>
-<td>elements</td>
-<td>Array</td>
-<td>&#x5143;&#x7D20;&#x6570;&#x7EC4;</td>
-</tr>
-<tr>
-<td>5</td>
-<td>group</td>
-<td>Object</td>
-<td>&#x5206;&#x7EC4;&#x5BF9;&#x8C61;</td>
-</tr>
-<tr>
-<td>6</td>
-<td>qline</td>
-<td>Object</td>
-<td>Qline&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</td>
-</tr>
-<tr>
-<td>7</td>
-<td>qtext</td>
-<td>Object</td>
-<td>Qtext&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</td>
-</tr>
-<tr>
-<td>8</td>
-<td>qrect</td>
-<td>Object</td>
-<td>Qrect&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</td>
+<td>createAnimation</td>
+<td>&#x6539;&#x53D8;&#x5BF9;&#x8C61;&#x67D0;&#x4E9B;&#x5C5E;&#x6027; &#x751F;&#x6210;&#x52A8;&#x753B;</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<h5 id="1&#x3001;qcanvasversionstring">1&#x3001;qcanvasVersion(String)</h5>
-<p>&#x4E3B;&#x7C7B;&#x7684;&#x7248;&#x672C;&#x53F7;
-this.qcanvasVersion = &apos;1.0&apos;;</p>
-</blockquote>
 <hr>
 <blockquote>
-<h5 id="2&#x3001;-contextobject">2&#x3001; context(Object)</h5>
-<p>&#x753B;&#x5E03;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;
-this.context = c_obj.getContext(&apos;2d&apos;);</p>
+<h5 id="1&#x3001;animate">1&#x3001;animate</h5>
+<p>&#x4E3A;&#x5BF9;&#x8C61;&#x751F;&#x6210;animation&#x5C5E;&#x6027;<br>&#x63A5;&#x6536;&#x53C2;&#x6570;&#xFF08;aim,startStyle,endStyle,during,isLoop,tween,finishCallback&#xFF09;<br>aim&#xFF1A;&#x5BF9;&#x8C61;<br>startStyle&#xFF1A;&#x8D77;&#x59CB;&#x72B6;&#x6001;&#x5BF9;&#x8C61;&#x6216;&#x6570;&#x503C; &#x4F8B;&#x5982;&#xFF1A;{start:[0,0]}<br>endStyle&#xFF1A;&#x7ED3;&#x675F;&#x72B6;&#x6001;&#x5BF9;&#x8C61;&#x6216;&#x6570;&#x503C; &#x4F8B;&#x5982;&#xFF1A;{start:[100,100]}<br>during&#xFF1A;&#x52A8;&#x753B;&#x65F6;&#x957F; &#x5355;&#x4F4D;&#xFF08;&#x79D2;&#xFF09;<br>isLoop&#xFF1A;&#x662F;&#x5426;&#x5FAA;&#x73AF;&#x64AD;&#x653E;&#x52A8;&#x753B; &#xFF08;false|true|&#x6B21;&#x6570;&#xFF09;
+tween&#xFF1A;&#x52A8;&#x753B;&#x65B9;&#x5F0F; &#xFF08;&#x4E3A;&#x7A7A;&#x65F6; &#x9ED8;&#x8BA4;&#x4E3A;Linear&#x65B9;&#x5F0F;&#xFF09;
+finishCallback&#xFF1A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x52A8;&#x753B;&#x5B8C;&#x6210;&#x540E;&#xFF09;</p>
 </blockquote>
-<hr>
+<p>tween&#x52A8;&#x753B;&#x65B9;&#x5F0F;</p>
+<pre><code>Linear
+Quad.easeIn
+Quad.easeOut
+Quad.easeInOut
+Cubic.easeIn
+Cubic.easeOut
+Cubic.easeInOut
+Quart.easeIn
+Quart.easeOut
+Quart.easeInOut
+Quint.easeIn
+Quint.easeOut
+Quint.easeInOut
+Sine.easeIn
+Sine.easeOut
+Sine.easeInOut
+Expo.easeIn
+Expo.easeOut
+Expo.easeInOut
+Circ.easeIn
+Circ.easeOut
+Circ.easeInOut
+Elastic.easeIn
+Elastic.easeOut
+Elastic.easeInOut
+Back.easeIn
+Back.easeOut
+Back.easeInOut
+Bounce.easeIn
+Bounce.easeOut
+Bounce.easeInOut
+</code></pre><p>&#x751F;&#x6210;animation&#x5C5E;&#x6027;&#x793A;&#x4F8B;</p>
+<pre><code>animation:{
+    &apos;framesIndex&apos;:0, //&#x5F53;&#x524D;&#x5E27;
+    &apos;framesCount&apos;:10,//&#x603B;&#x5E27;&#x6570;
+    &apos;during&apos;:2,//&#x8FD0;&#x884C;&#x65F6;&#x95F4;
+    &apos;frames&apos;:{start:[[0,0],[1,0],[2,0]....]},//&#x5E8F;&#x5217;&#x5E27;&#x5BF9;&#x8C61;
+    &apos;isLoop&apos;:true,    //&#x662F;&#x5426;&#x5FAA;&#x73AF;&#x64AD;&#x653E;
+}
+</code></pre><p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</p>
+<pre><code>qcanvas.qanimation.animate(line1,{
+        start:[0,80],
+    },{
+        start:[100,80],
+    },2,true);
+
+&#x8981;&#x6C42;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x80FD;&#x591F;&#x7EBF;&#x6027;&#x53D8;&#x5316;
+</code></pre><hr>
 <blockquote>
-<h5 id="3&#x3001;stageobject">3&#x3001;stage(Object)</h5>
-<p>&#x62BD;&#x8C61;&#x7684;&#x821E;&#x53F0;&#x5BF9;&#x8C61;
-this.stage = {
-        &quot;id&quot;:c_p[0],
-        &quot;width&quot;:c_p[1],
-        &quot;height&quot;:c_p[2]
-    };</p>
+<h5 id="2&#x3001;createanimation">2&#x3001;createAnimation</h5>
+<p>&#x6539;&#x53D8;&#x5BF9;&#x8C61;&#x67D0;&#x4E9B;&#x5C5E;&#x6027;<br>&#x8BE5;&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x88AB;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;<br>Qline&#x7C7B; paintLine&#x65B9;&#x6CD5;<br>Qtext&#x7C7B; paintText&#x65B9;&#x6CD5;<br>Qarc&#x7C7B; paintArc&#x65B9;&#x6CD5;<br>Qpolygon&#x7C7B; paintPolygon&#x65B9;&#x6CD5;<br>Qrect&#x7C7B; paintRect&#x65B9;&#x6CD5;</p>
 </blockquote>
-<hr>
-<blockquote>
-<h5 id="4&#x3001;elementsarray">4&#x3001;elements(Array)</h5>
-<p>&#x5143;&#x7D20;&#x6570;&#x7EC4;
-this.elements = [];
-&#x6309;z-index&#x5C5E;&#x6027;&#x7531;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;</p>
-</blockquote>
-<hr>
-<blockquote>
-<h5 id="5&#x3001;groupobject">5&#x3001;group(Object)</h5>
-<p>&#x5206;&#x7EC4;&#x5BF9;&#x8C61;&#xFF08;&#x5143;&#x7D20;&#x5C5E;&#x4E8E;&#x54EA;&#x4E2A;&#x7EC4;&#xFF09;
-this.group = {};</p>
-</blockquote>
-<hr>
-<blockquote>
-<h5 id="6&#x3001;qlineobject">6&#x3001;qline(Object)</h5>
-<p>Qline&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;
-this.qline = new Qline(this);</p>
-</blockquote>
-<hr>
-<blockquote>
-<h5 id="7&#x3001;qtextobject">7&#x3001;qtext(Object)</h5>
-<p>Qtext&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;
-this.qtext = new Qtext(this);</p>
-</blockquote>
-<hr>
-<blockquote>
-<h5 id="8&#x3001;qrectobject">8&#x3001;qrect(Object)</h5>
-<p>Qrect&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;
-this.qrect = new Qrect(this);</p>
-</blockquote>
+<p>paint&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x5728;&#x6BCF;&#x4E2A;&#x52A8;&#x753B;&#x5468;&#x671F;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x628A;&#x6539;&#x53D8;&#x5BF9;&#x8C61;&#x67D0;&#x4E9B;&#x5C5E;&#x6027;&#x7684;&#x529F;&#x80FD;&#x653E;&#x5728;&#x6B64;&#x5904; &#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x6E32;&#x67D3;&#x65F6;&#x751F;&#x6210;&#x52A8;&#x753B;&#x3002;</p>
 <footer class="page-footer"><span class="copyright">&#xA9; Qcanvas all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
 2020-09-18 21:09:56
 </span></footer>
@@ -809,12 +779,12 @@ this.qrect = new Qrect(this);</p>
 
             
                 
-                <a href="../chapter1.html" class="navigation navigation-prev " aria-label="Previous page: Qcanvas类">
+                <a href="shu-xing.html" class="navigation navigation-prev " aria-label="Previous page: 属性">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="fang-fa.html" class="navigation navigation-next " aria-label="Next page: 方法">
+                <a href="../qimglei.html" class="navigation navigation-next " aria-label="Next page: Qimg类">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -825,7 +795,7 @@ this.qrect = new Qrect(this);</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"属性","level":"1.2.1","depth":2,"next":{"title":"方法","level":"1.2.2","depth":2,"path":"chapter1/fang-fa.md","ref":"chapter1/fang-fa.md","articles":[]},"previous":{"title":"Qcanvas类","level":"1.2","depth":1,"path":"chapter1.md","ref":"chapter1.md","articles":[{"title":"属性","level":"1.2.1","depth":2,"path":"chapter1/shu-xing.md","ref":"chapter1/shu-xing.md","articles":[]},{"title":"方法","level":"1.2.2","depth":2,"path":"chapter1/fang-fa.md","ref":"chapter1/fang-fa.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","code","sidebar-style","auto-scroll-table"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas使用文档","output.name":"docs","gitbook":"*","description":"Qcanvas使用文档"},"file":{"path":"chapter1/shu-xing.md","mtime":"2020-09-18T13:09:56.363Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-21T09:50:13.358Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"方法","level":"1.7.2","depth":2,"next":{"title":"Qimg类","level":"1.8","depth":1,"path":"qimglei.md","ref":"qimglei.md","articles":[{"title":"属性","level":"1.8.1","depth":2,"path":"qimglei/shu-xing.md","ref":"qimglei/shu-xing.md","articles":[]},{"title":"方法","level":"1.8.2","depth":2,"path":"qimglei/fang-fa.md","ref":"qimglei/fang-fa.md","articles":[]}]},"previous":{"title":"属性","level":"1.7.1","depth":2,"path":"qanimationlei/shu-xing.md","ref":"qanimationlei/shu-xing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","code","sidebar-style","auto-scroll-table","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"livereload":{},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas使用文档","output.name":"docs","gitbook":"*","description":"Qcanvas使用文档"},"file":{"path":"qanimationlei/fang-fa.md","mtime":"2020-09-18T13:09:56.366Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-21T09:47:59.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -848,6 +818,10 @@ this.qrect = new Qrect(this);</p>
     
         
         <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
