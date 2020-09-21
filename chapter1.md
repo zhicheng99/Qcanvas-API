@@ -16,8 +16,6 @@ var qcanvas = new Qcanvas(
     mouseenter:function(){}
 }
 );
-
-
 ```
 
 
