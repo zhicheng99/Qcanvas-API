@@ -27,7 +27,6 @@
   * [方法](qspiritlei/fang-fa.md)
 * [Qshape类](qshapelei.md)
   * [属性](qshapelei/shu-xing.md)
-* [code](code.md)
 * [Qlayer类](qlayerlei.md)
   * [属性](shu-xing.md)
   * [方法](fang-fa.md)
