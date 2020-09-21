@@ -50,7 +50,7 @@ Qlayer元素类
 | 方法 | 备注 |
 | :--- | :--- |
 | lower | 把元素降低一个层级 \(参数为元素对象\) |
-| lowerToBottomlowerToBottom | 把元素层级置底\(参数为元素对象\) |
+| lowerToBottom | 把元素层级置底\(参数为元素对象\) |
 | raise | 把元素提高一个层级\(参数为元素对象\) |
 | raiseToTop | 把元素层级置顶\(参数为元素对象\) |
 
