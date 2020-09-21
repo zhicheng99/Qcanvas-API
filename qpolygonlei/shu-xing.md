@@ -16,7 +16,7 @@
 14|touchstart|Fun|否|事件
 15|touchmove|Fun|否|事件
 16|touchend|Fun|否|事件
-| 17 | mouseenter | Fun | 否 | 事件 |
+17 | mouseenter | Fun | 否 | 事件
 
 
 
