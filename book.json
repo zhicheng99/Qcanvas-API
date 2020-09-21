@@ -3,7 +3,8 @@
          "expandable-chapters-small",
          "tbfed-pagefooter",
          "code",
-         "sidebar-style"
+         "sidebar-style",
+         "auto-scroll-table"
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {
