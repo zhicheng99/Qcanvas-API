@@ -1,5 +1,13 @@
 {
     "plugins": [
-         "expandable-chapters-small"
-    ]
+         "expandable-chapters-small",
+         "tbfed-pagefooter"
+    ],
+    "pluginsConfig": {
+        "tbfed-pagefooter": {
+          "copyright":"&copy Qcanvas",
+          "modify_label": "文件修订时间：",
+          "modify_format": "YYYY-MM-DD HH:mm:ss"
+        }
+    }
 }
