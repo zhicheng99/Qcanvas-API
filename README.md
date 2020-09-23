@@ -1,7 +1,6 @@
 # Qcanvas API v1.0
 
-Qcanvas API说明文档  
-正在一步一步开发中，基础功能完成后 发布v1.0
+Qcanvas API说明文档
 
 基础功能的开发计划  
 Qcanvas主类 随时完善  
