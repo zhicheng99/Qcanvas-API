@@ -18,5 +18,7 @@ var qcanvas = new Qcanvas(
 );
 ```
 
+{% codeeditor   src='./example/init.html', height="500",maxLines="500", readOnly='true', theme='github' %}
 
+{% endcodeeditor %}
 

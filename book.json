@@ -5,10 +5,10 @@
     "output.name": "docs",
     "plugins": [
          "expandable-chapters-small",
-         "tbfed-pagefooter",
-         "code",
+         "tbfed-pagefooter", 
          "sidebar-style",
-         "auto-scroll-table"
+         "auto-scroll-table",
+         "code-editor"
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {
