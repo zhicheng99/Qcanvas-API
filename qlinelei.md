@@ -12,6 +12,6 @@ var line4 = qcanvas.qline.line({
 });
 ```
 
-{% codeeditor   src='./example/line.html', height="500",maxLines="500", readOnly='true', theme='github' %}
+{% codeeditor   src='./example/line.html', height="800",maxLines="500", readOnly='true', theme='github' %}
 
 {% endcodeeditor %}

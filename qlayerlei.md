@@ -19,6 +19,6 @@ Qlayer元素类
 | raise         | 把元素提高一个层级（参数是元素对象） |
 | raiseToTop    | 把元素置顶（参数为元素对象）         |
 
-{% codeeditor   src='./example/layer.html', height="500",maxLines="500", readOnly='true', theme='github' %}
+{% codeeditor   src='./example/layer.html', height="800",maxLines="500", readOnly='true', theme='github' %}
 
 {% endcodeeditor %}

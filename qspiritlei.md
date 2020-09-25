@@ -47,7 +47,7 @@ qcanvas.load({
 		}) 
 			```
 
-{% codeeditor   src='./example/spirit.html', height="500",maxLines="500", readOnly='true', theme='github' %}
+{% codeeditor   src='./example/spirit.html', height="800",maxLines="500", readOnly='true', theme='github' %}
 
 {% endcodeeditor %}
 

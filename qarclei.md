@@ -4,7 +4,7 @@
 this.qarc = new Qarc(this);
 ```
 
-{% codeeditor   src='./example/arc.html', height="500",maxLines="500", readOnly='true', theme='github' %}
+{% codeeditor   src='./example/arc.html', height="800",maxLines="500", readOnly='true', theme='github' %}
 
 {% endcodeeditor %}
 
