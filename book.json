@@ -3,6 +3,9 @@
     "description": "Qcanvas使用文档",
     "author": "lizhicheng",
     "output.name": "docs",
+    "styles": {
+        "website": "example/style/website.css"
+    },
     "plugins": [
          "expandable-chapters-small",
          "tbfed-pagefooter", 
