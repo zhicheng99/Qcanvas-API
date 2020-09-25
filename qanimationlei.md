@@ -8,7 +8,7 @@ qcanvas.qanimation.animate(arc,{
 },10,true);
 ```
 
-{% codeeditor   src='./example/animation.html', height="800",maxLines="500", readOnly='true', theme='github' %}
+{% codeeditor   src='./example/animation.html', height="500px",maxLines="500", readOnly='true', theme='github' %}
 
 {% endcodeeditor %}
 
