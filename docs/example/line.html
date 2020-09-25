@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		canvas{
+			background: #eee;
+		}
+	</style>
+</head>
+<body>
+<canvas id="qcanvas"></canvas>
+<script type="text/javascript" src="./example/js/Qcanvas.js"></script>
+<script type="text/javascript">
+	var qcanvas = new Qcanvas({
+		id:'qcanvas',
+		width:300,
+		height:200,
+		mousedown:function(e){ 
+			console.log(e);
+			console.log('canvas mousedown');
+		},
+		mousemove:function(){  
+			console.log('canvas mousemove');
+		},
+		mouseup:function(){
+			console.log('canvas mouseup');
+		},
+		mouseout:function(){
+			console.log('canvas mouseout');
+		}
+	});
+
+var layer = qcanvas.qlayer.layer();
+var line1 = qcanvas.qline.line({
+	start:function(){return [100,50];},
+	end:[50,150],
+	color:'red',
+	like:'-',
+	withText:'可拖动',
+	drag:'vertical',
+	mouseout:function(e,position){
+		console.log(e);
+		console.log('line1 mouseout');
+	}
+	
+});
+
+
+
+
+var line2 = qcanvas.qline.line({
+	start:function(){return [150,50];},
+	end:[0,20],
+	color:'blue',
+	like:'-',
+	withText:'可拖动',
+	mousemove:function(){
+		// console.log('dddd');
+	}
+	// drag:false
+});
+
+
+
+
+var line3 = qcanvas.qline.line({
+	start:function(){return [30,50];},
+	end:[150,60],
+	width:1,
+	like:'->',
+	color:'gray',
+	withText:'line3',
+	drag:false
+
+});		
+
+layer.push(line3);
+
+var line4 = qcanvas.qline.line({
+	start:function(){return [100,123];},
+	end:[150,180],
+	width:1,
+	like:'-->',
+	color:'gray',
+	withText:'line4',
+	withTextAlign:'left',
+	drag:false
+	
+});
+
+
+var line5 = qcanvas.qline.line({
+	start:[250,50],
+	end:[200,200],
+	width:1,
+	like:'<-->',
+	color:'gray',
+	withText:'虚线双向箭头',
+	withTextAlign:'left',
+	// drag:false
+	
+});
+
+var line6 = qcanvas.qline.line({
+	start:[120,50],
+	end:[140,200],
+	width:1,
+	like:'<->',
+	color:'blue',
+	withText:'实线双向箭头',
+	withTextAlign:'left',
+	// drag:false
+	
+});
+</script>
+</body>
+</html>

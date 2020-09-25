@@ -678,8 +678,287 @@
     withText:&apos;line4&apos;,
     withTextAlign:&apos;left&apos;
 });
-</code></pre><footer class="page-footer"><span class="copyright">&#xA9; Qcanvas all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-09-21 20:33:36
+</code></pre><p>
+    <div class="zc-editor" data-id="3" data-single-tab="false">
+      <div class="zc-top blue">
+        <div class="zc-actions">
+          <div class="zc-btn" data-text="JSFiddle" onclick="exportToCodepen(3);">
+            <div>Export</div>
+          </div>
+        </div>
+        
+        <div class="zc-commands">
+          <div id="html-btn3" class="zc-btn" onclick="toggle(&apos;html&apos;, 3)">HTML</div>
+          <!--<div id="js-btn3" class="zc-btn" onclick="toggle('js', 3)">JavaScript</div>-->
+          <!--<div id="css-btn3" class="zc-btn" onclick="toggle('css', 3)">CSS</div>-->
+          <div id="result-btn3" class="zc-btn" onclick="toggle(&apos;result&apos;, 3)">Result</div>
+        </div>
+      </div>
+      <div class="zc-content">
+        <div id="html3" class="zc-cont" style="display:none; ">
+          <div class="editor" id="codeeditor3" data-settings="{&quot;readOnly&quot;:&quot;true&quot;,&quot;mode&quot;:&quot;html&quot;,&quot;theme&quot;:&quot;github&quot;,&quot;maxLines&quot;:&quot;500&quot;}">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		canvas{
+			background: #eee;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;canvas id=&quot;qcanvas&quot;&gt;&lt;/canvas&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./example/js/Qcanvas.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var qcanvas = new Qcanvas({
+		id:&apos;qcanvas&apos;,
+		width:300,
+		height:200,
+		mousedown:function(e){ 
+			console.log(e);
+			console.log(&apos;canvas mousedown&apos;);
+		},
+		mousemove:function(){  
+			console.log(&apos;canvas mousemove&apos;);
+		},
+		mouseup:function(){
+			console.log(&apos;canvas mouseup&apos;);
+		},
+		mouseout:function(){
+			console.log(&apos;canvas mouseout&apos;);
+		}
+	});
+
+var layer = qcanvas.qlayer.layer();
+var line1 = qcanvas.qline.line({
+	start:function(){return [100,50];},
+	end:[50,150],
+	color:&apos;red&apos;,
+	like:&apos;-&apos;,
+	withText:&apos;&#x53EF;&#x62D6;&#x52A8;&apos;,
+	drag:&apos;vertical&apos;,
+	mouseout:function(e,position){
+		console.log(e);
+		console.log(&apos;line1 mouseout&apos;);
+	}
+	
+});
+
+
+
+
+var line2 = qcanvas.qline.line({
+	start:function(){return [150,50];},
+	end:[0,20],
+	color:&apos;blue&apos;,
+	like:&apos;-&apos;,
+	withText:&apos;&#x53EF;&#x62D6;&#x52A8;&apos;,
+	mousemove:function(){
+		// console.log(&apos;dddd&apos;);
+	}
+	// drag:false
+});
+
+
+
+
+var line3 = qcanvas.qline.line({
+	start:function(){return [30,50];},
+	end:[150,60],
+	width:1,
+	like:&apos;-&gt;&apos;,
+	color:&apos;gray&apos;,
+	withText:&apos;line3&apos;,
+	drag:false
+
+});		
+
+layer.push(line3);
+
+var line4 = qcanvas.qline.line({
+	start:function(){return [100,123];},
+	end:[150,180],
+	width:1,
+	like:&apos;--&gt;&apos;,
+	color:&apos;gray&apos;,
+	withText:&apos;line4&apos;,
+	withTextAlign:&apos;left&apos;,
+	drag:false
+	
+});
+
+
+var line5 = qcanvas.qline.line({
+	start:[250,50],
+	end:[200,200],
+	width:1,
+	like:&apos;&lt;--&gt;&apos;,
+	color:&apos;gray&apos;,
+	withText:&apos;&#x865A;&#x7EBF;&#x53CC;&#x5411;&#x7BAD;&#x5934;&apos;,
+	withTextAlign:&apos;left&apos;,
+	// drag:false
+	
+});
+
+var line6 = qcanvas.qline.line({
+	start:[120,50],
+	end:[140,200],
+	width:1,
+	like:&apos;&lt;-&gt;&apos;,
+	color:&apos;blue&apos;,
+	withText:&apos;&#x5B9E;&#x7EBF;&#x53CC;&#x5411;&#x7BAD;&#x5934;&apos;,
+	withTextAlign:&apos;left&apos;,
+	// drag:false
+	
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+        </div><div id="result3" class="zc-cont" style="overflow:hidden;" data-height="500"></div>
+        <div id="js3" class="zc-cont" style="display:none">
+          <pre id="js-code3" class="prettyprint linenums"></pre>
+        </div>
+  
+        <div id="css3" class="zc-cont" style="display:none">
+          <pre id="css-code3" class="prettyprint linenums"></pre>
+        </div>
+  
+      </div>
+  
+      <input type="hidden" id="init-html3" value="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		canvas{
+			background: #eee;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;canvas id=&quot;qcanvas&quot;&gt;&lt;/canvas&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./example/js/Qcanvas.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var qcanvas = new Qcanvas({
+		id:&apos;qcanvas&apos;,
+		width:300,
+		height:200,
+		mousedown:function(e){ 
+			console.log(e);
+			console.log(&apos;canvas mousedown&apos;);
+		},
+		mousemove:function(){  
+			console.log(&apos;canvas mousemove&apos;);
+		},
+		mouseup:function(){
+			console.log(&apos;canvas mouseup&apos;);
+		},
+		mouseout:function(){
+			console.log(&apos;canvas mouseout&apos;);
+		}
+	});
+
+var layer = qcanvas.qlayer.layer();
+var line1 = qcanvas.qline.line({
+	start:function(){return [100,50];},
+	end:[50,150],
+	color:&apos;red&apos;,
+	like:&apos;-&apos;,
+	withText:&apos;&#x53EF;&#x62D6;&#x52A8;&apos;,
+	drag:&apos;vertical&apos;,
+	mouseout:function(e,position){
+		console.log(e);
+		console.log(&apos;line1 mouseout&apos;);
+	}
+	
+});
+
+
+
+
+var line2 = qcanvas.qline.line({
+	start:function(){return [150,50];},
+	end:[0,20],
+	color:&apos;blue&apos;,
+	like:&apos;-&apos;,
+	withText:&apos;&#x53EF;&#x62D6;&#x52A8;&apos;,
+	mousemove:function(){
+		// console.log(&apos;dddd&apos;);
+	}
+	// drag:false
+});
+
+
+
+
+var line3 = qcanvas.qline.line({
+	start:function(){return [30,50];},
+	end:[150,60],
+	width:1,
+	like:&apos;-&gt;&apos;,
+	color:&apos;gray&apos;,
+	withText:&apos;line3&apos;,
+	drag:false
+
+});		
+
+layer.push(line3);
+
+var line4 = qcanvas.qline.line({
+	start:function(){return [100,123];},
+	end:[150,180],
+	width:1,
+	like:&apos;--&gt;&apos;,
+	color:&apos;gray&apos;,
+	withText:&apos;line4&apos;,
+	withTextAlign:&apos;left&apos;,
+	drag:false
+	
+});
+
+
+var line5 = qcanvas.qline.line({
+	start:[250,50],
+	end:[200,200],
+	width:1,
+	like:&apos;&lt;--&gt;&apos;,
+	color:&apos;gray&apos;,
+	withText:&apos;&#x865A;&#x7EBF;&#x53CC;&#x5411;&#x7BAD;&#x5934;&apos;,
+	withTextAlign:&apos;left&apos;,
+	// drag:false
+	
+});
+
+var line6 = qcanvas.qline.line({
+	start:[120,50],
+	end:[140,200],
+	width:1,
+	like:&apos;&lt;-&gt;&apos;,
+	color:&apos;blue&apos;,
+	withText:&apos;&#x5B9E;&#x7EBF;&#x53CC;&#x5411;&#x7BAD;&#x5934;&apos;,
+	withTextAlign:&apos;left&apos;,
+	// drag:false
+	
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+      <input type="hidden" id="init-css3" value="">
+      <input type="hidden" id="init-js3" value="">
+      <input type="hidden" id="init-active3" value="html">
+  
+      <div style="display:none;">
+        <form method="post" id="codepen-form3" action="//codepen.io/pen/define" target="check">
+          <input id="codepen-data3" type="hidden" name="data">
+          <input type="hidden" name="wrap" value="l">
+        </form>
+      </div>
+    </div>
+   </p>
+<footer class="page-footer"><span class="copyright">&#xA9; Qcanvas all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-09-25 11:28:48
 </span></footer>
                                 
                                 </section>
@@ -723,7 +1002,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Qline类","level":"1.4","depth":1,"next":{"title":"属性","level":"1.4.1","depth":2,"path":"qlinelei/shu-xing.md","ref":"qlinelei/shu-xing.md","articles":[]},"previous":{"title":"方法","level":"1.3.2","depth":2,"path":"qtextlei/fang-fa.md","ref":"qtextlei/fang-fa.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas使用文档","output.name":"docs","gitbook":"*","description":"Qcanvas使用文档"},"file":{"path":"qlinelei.md","mtime":"2020-09-21T12:33:36.371Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-24T16:46:01.741Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Qline类","level":"1.4","depth":1,"next":{"title":"属性","level":"1.4.1","depth":2,"path":"qlinelei/shu-xing.md","ref":"qlinelei/shu-xing.md","articles":[]},"previous":{"title":"方法","level":"1.3.2","depth":2,"path":"qtextlei/fang-fa.md","ref":"qtextlei/fang-fa.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas使用文档","output.name":"docs","gitbook":"*","description":"Qcanvas使用文档"},"file":{"path":"qlinelei.md","mtime":"2020-09-25T03:28:48.617Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-25T03:31:47.439Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

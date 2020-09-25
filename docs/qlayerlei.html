@@ -703,8 +703,405 @@
 </tr>
 </tbody>
 </table>
+<p>
+    <div class="zc-editor" data-id="10" data-single-tab="false">
+      <div class="zc-top blue">
+        <div class="zc-actions">
+          <div class="zc-btn" data-text="JSFiddle" onclick="exportToCodepen(10);">
+            <div>Export</div>
+          </div>
+        </div>
+        
+        <div class="zc-commands">
+          <div id="html-btn10" class="zc-btn" onclick="toggle(&apos;html&apos;, 10)">HTML</div>
+          <!--<div id="js-btn10" class="zc-btn" onclick="toggle('js', 10)">JavaScript</div>-->
+          <!--<div id="css-btn10" class="zc-btn" onclick="toggle('css', 10)">CSS</div>-->
+          <div id="result-btn10" class="zc-btn" onclick="toggle(&apos;result&apos;, 10)">Result</div>
+        </div>
+      </div>
+      <div class="zc-content">
+        <div id="html10" class="zc-cont" style="display:none; ">
+          <div class="editor" id="codeeditor10" data-settings="{&quot;readOnly&quot;:&quot;true&quot;,&quot;mode&quot;:&quot;html&quot;,&quot;theme&quot;:&quot;github&quot;,&quot;maxLines&quot;:&quot;500&quot;}">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		canvas{
+			background: #eee;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;canvas id=&quot;qcanvas&quot;&gt;&lt;/canvas&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./example/js/Qcanvas.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var qcanvas = new Qcanvas([&quot;qcanvas&quot;,300,200]);
+	var greenRect = qcanvas.qrect.rect({
+		start:[0,0],
+		width:200,
+		height:200,
+		// drag:false,
+		borderColor:&apos;green&apos;,
+		fillColor:&apos;green&apos;, 
+	})
+
+	var redRect = qcanvas.qrect.rect({
+		start:[100,100],
+		width:50,
+		height:50,
+		borderColor:&apos;red&apos;,
+		fillColor:&apos;red&apos;, 
+		// degree:30
+		// drag:false
+	}) 
+
+
+
+
+
+
+
+	var blueRect = qcanvas.qrect.rect({
+		start:[120,140],
+		width:50,
+		height:50,
+		borderColor:&apos;blue&apos;,
+		fillColor:&apos;blue&apos;,
+		degree:30
+		// drag:false
+	})
+
+ 
+
+
+
+
+ 
+
+
+	//layer&#x5143;&#x7D20;
+	var layer = qcanvas.qlayer.layer(); 
+
+	layer.push(redRect,blueRect);
+
+	// layer.push(blueRect);
+ 
+	
+	layer.raise(redRect);
+
+
+
+
+	qcanvas.load({			
+		&quot;person&quot;:&quot;./example/img/spirit1.png&quot;,
+	},function(){
+		
+			var spiritSource = qcanvas.getSourceByName(&quot;person&quot;); 
+
+			var s = qcanvas.qspirit.spirit({
+				img:spiritSource,
+				row:1,
+				column:8,
+				framesIndex:[0,0],
+				tStart:[0,120],
+				tWidth:40,
+				tHeight:64,
+				isLoop:true,
+				during:1,
+				mouseup:function(){
+					console.log(this);
+					console.log(&apos;&#x89E6;&#x53D1;mouseup&#x4E8B;&#x4EF6;&apos;);
+				}
+			})
+
+			var t = qcanvas.qtext.text({
+				start:s.tStart,
+				text:&apos;&#x6211;&#x662F;&#x6765;&#x81EA;layer&#x5BB9;&#x5668;&#x91CC;spirit&apos;,
+				color:&apos;#000&apos;,
+				pointerEvent:&apos;none&apos; 
+			})
+			
+
+
+			layer.push(t);
+			layer.push(s);
+					
+	})
+ 
+
+ console.log(layer)
+
+
+	qcanvas.qtext.text({
+		start:[200,20],
+		text:&apos;greenRect&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+		drag:false,
+		mouseup:function(){
+			qcanvas.raise(greenRect);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,40],
+		text:&apos;greenRect&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			qcanvas.lower(greenRect);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,60],
+		text:&apos;redRect&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			layer.raise(redRect);
+		}
+	})
+	qcanvas.qtext.text({
+		start:[200,80],
+		text:&apos;redRect&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			layer.lower(redRect);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,100],
+		text:&apos;layer&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			qcanvas.lower(layer);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,120],
+		text:&apos;layer&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			qcanvas.raise(layer); 
+		}
+	})
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+        </div><div id="result10" class="zc-cont" style="overflow:hidden;" data-height="500"></div>
+        <div id="js10" class="zc-cont" style="display:none">
+          <pre id="js-code10" class="prettyprint linenums"></pre>
+        </div>
+  
+        <div id="css10" class="zc-cont" style="display:none">
+          <pre id="css-code10" class="prettyprint linenums"></pre>
+        </div>
+  
+      </div>
+  
+      <input type="hidden" id="init-html10" value="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		canvas{
+			background: #eee;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;canvas id=&quot;qcanvas&quot;&gt;&lt;/canvas&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./example/js/Qcanvas.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var qcanvas = new Qcanvas([&quot;qcanvas&quot;,300,200]);
+	var greenRect = qcanvas.qrect.rect({
+		start:[0,0],
+		width:200,
+		height:200,
+		// drag:false,
+		borderColor:&apos;green&apos;,
+		fillColor:&apos;green&apos;, 
+	})
+
+	var redRect = qcanvas.qrect.rect({
+		start:[100,100],
+		width:50,
+		height:50,
+		borderColor:&apos;red&apos;,
+		fillColor:&apos;red&apos;, 
+		// degree:30
+		// drag:false
+	}) 
+
+
+
+
+
+
+
+	var blueRect = qcanvas.qrect.rect({
+		start:[120,140],
+		width:50,
+		height:50,
+		borderColor:&apos;blue&apos;,
+		fillColor:&apos;blue&apos;,
+		degree:30
+		// drag:false
+	})
+
+ 
+
+
+
+
+ 
+
+
+	//layer&#x5143;&#x7D20;
+	var layer = qcanvas.qlayer.layer(); 
+
+	layer.push(redRect,blueRect);
+
+	// layer.push(blueRect);
+ 
+	
+	layer.raise(redRect);
+
+
+
+
+	qcanvas.load({			
+		&quot;person&quot;:&quot;./example/img/spirit1.png&quot;,
+	},function(){
+		
+			var spiritSource = qcanvas.getSourceByName(&quot;person&quot;); 
+
+			var s = qcanvas.qspirit.spirit({
+				img:spiritSource,
+				row:1,
+				column:8,
+				framesIndex:[0,0],
+				tStart:[0,120],
+				tWidth:40,
+				tHeight:64,
+				isLoop:true,
+				during:1,
+				mouseup:function(){
+					console.log(this);
+					console.log(&apos;&#x89E6;&#x53D1;mouseup&#x4E8B;&#x4EF6;&apos;);
+				}
+			})
+
+			var t = qcanvas.qtext.text({
+				start:s.tStart,
+				text:&apos;&#x6211;&#x662F;&#x6765;&#x81EA;layer&#x5BB9;&#x5668;&#x91CC;spirit&apos;,
+				color:&apos;#000&apos;,
+				pointerEvent:&apos;none&apos; 
+			})
+			
+
+
+			layer.push(t);
+			layer.push(s);
+					
+	})
+ 
+
+ console.log(layer)
+
+
+	qcanvas.qtext.text({
+		start:[200,20],
+		text:&apos;greenRect&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+		drag:false,
+		mouseup:function(){
+			qcanvas.raise(greenRect);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,40],
+		text:&apos;greenRect&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			qcanvas.lower(greenRect);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,60],
+		text:&apos;redRect&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			layer.raise(redRect);
+		}
+	})
+	qcanvas.qtext.text({
+		start:[200,80],
+		text:&apos;redRect&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			layer.lower(redRect);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,100],
+		text:&apos;layer&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			qcanvas.lower(layer);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,120],
+		text:&apos;layer&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
+		color:&quot;yellow&quot;,
+
+		drag:false,
+		mouseup:function(){
+			qcanvas.raise(layer); 
+		}
+	})
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+      <input type="hidden" id="init-css10" value="">
+      <input type="hidden" id="init-js10" value="">
+      <input type="hidden" id="init-active10" value="html">
+  
+      <div style="display:none;">
+        <form method="post" id="codepen-form10" action="//codepen.io/pen/define" target="check">
+          <input id="codepen-data10" type="hidden" name="data">
+          <input type="hidden" name="wrap" value="l">
+        </form>
+      </div>
+    </div>
+   </p>
 <footer class="page-footer"><span class="copyright">&#xA9; Qcanvas all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-09-24 20:56:51
+2020-09-25 11:28:35
 </span></footer>
                                 
                                 </section>
@@ -748,7 +1145,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Qlayer类","level":"1.11","depth":1,"next":{"title":"属性","level":"1.11.1","depth":2,"path":"shu-xing.md","ref":"shu-xing.md","articles":[]},"previous":{"title":"属性","level":"1.10.1","depth":2,"path":"qshapelei/shu-xing.md","ref":"qshapelei/shu-xing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas使用文档","output.name":"docs","gitbook":"*","description":"Qcanvas使用文档"},"file":{"path":"qlayerlei.md","mtime":"2020-09-24T12:56:51.035Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-24T16:46:01.741Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Qlayer类","level":"1.11","depth":1,"next":{"title":"属性","level":"1.11.1","depth":2,"path":"shu-xing.md","ref":"shu-xing.md","articles":[]},"previous":{"title":"属性","level":"1.10.1","depth":2,"path":"qshapelei/shu-xing.md","ref":"qshapelei/shu-xing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas使用文档","output.name":"docs","gitbook":"*","description":"Qcanvas使用文档"},"file":{"path":"qlayerlei.md","mtime":"2020-09-25T03:28:35.642Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-25T03:31:47.439Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

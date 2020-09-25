@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		canvas{
+			background: #eee;
+		}
+	</style>
+</head>
+<body>
+<canvas id="qcanvas"></canvas>
+<script type="text/javascript" src="./example/js/Qcanvas.js"></script>
+<script type="text/javascript">
+	var qcanvas = new Qcanvas(["qcanvas",300,200]);
+	var arc = qcanvas.qarc.arc({
+		start:function(){return [100,100];},
+		sAngle:0,
+		eAngle:360,
+		fillColor:'#fff',
+		opacity:0.2,
+		r:20
+	});		
+</script>
+</body>
+</html>

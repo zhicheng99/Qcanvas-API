@@ -11,9 +11,20 @@
 </head>
 <body>
 <canvas id="qcanvas"></canvas>
-<script type="text/javascript" src="js/Qcanvas.js"></script>
+<script type="text/javascript" src="./example/js/Qcanvas.js"></script>
 <script type="text/javascript">
 	var qcanvas = new Qcanvas(["qcanvas",300,200]);
+	qcanvas.qline.line({
+		start:function(){return [150,50];},
+		end:[0,20],
+		color:'blue',
+		like:'-',
+		withText:'可拖动',
+		mousemove:function(){
+			// console.log('dddd');
+		}
+		// drag:false
+	});
 </script>
 </body>
 </html>
