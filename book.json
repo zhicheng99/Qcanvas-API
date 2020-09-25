@@ -1,8 +1,8 @@
 {
-    "title": "Qcanvas使用文档",
-    "description": "Qcanvas使用文档",
+    "title": "Qcanvas V1.0使用文档",
+    "description": "Qcanvas V1.0使用文档",
     "author": "lizhicheng",
-    "output.name": "docs",
+    "output.name": "Qcanvas V1.0使用文档",
     "styles": {
         "website": "example/style/website.css"
     },
@@ -20,7 +20,7 @@
           "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
         "sidebar-style": {
-            "title": "Qcanvas使用文档",
+            "title": "Qcanvas V1.0使用文档",
             "author": "志成"
         }
     }
