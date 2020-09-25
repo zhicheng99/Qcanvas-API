@@ -1,8 +1,24 @@
-##### 创建spirit对象
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		canvas{
+			background: #eee;
+		}
+	</style>
+</head>
+<body>
+<canvas id="qcanvas"></canvas>
+<canvas id="qcanvas1"></canvas>
 
-```
-qcanvas.load({			
-				"person":"img/spirit1.png",
+<script type="text/javascript" src="./example/js/Qcanvas.js"></script>
+<script type="text/javascript">
+	(function(){
+		var qcanvas = new Qcanvas(["qcanvas",300,200]);
+			qcanvas.load({			
+				"person":"./example/img/spirit1.png",
 			},function(){
 				
 					var spiritSource = qcanvas.getSourceByName("person"); 
@@ -26,12 +42,16 @@ qcanvas.load({
 						
 							
 			})
-```
-			或
-			
-			```
-			qcanvas.qspirit.spirit({ 
-			img:'img/spirit1.png',
+
+
+	})();
+
+	(function(){
+		var qcanvas = new Qcanvas(["qcanvas1",300,200]);  
+
+		qcanvas.qspirit.spirit({
+			// img:spiritSource,
+			img:'./example/img/spirit1.png',
 			row:1,
 			column:8,
 			framesIndex:[0,0],
@@ -45,9 +65,8 @@ qcanvas.load({
 				console.log('触发mouseup事件');
 			}
 		}) 
-			```
 
-{% codeeditor   src='./example/spirit.html', height="500",maxLines="500", readOnly='true', theme='github' %}
-
-{% endcodeeditor %}
-
+	})()
+</script>
+</body>
+</html>

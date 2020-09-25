@@ -41,5 +41,7 @@ console.log(position);
 });
 ```
 
+{% codeeditor   src='./example/img.html', height="500",maxLines="500", readOnly='true', theme='github' %}
 
+{% endcodeeditor %}
 

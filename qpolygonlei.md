@@ -8,5 +8,7 @@ var polygon = qcanvas.qpolygon.polygon({
     })
 ```
 
+{% codeeditor   src='./example/polygon.html', height="500",maxLines="500", readOnly='true', theme='github' %}
 
+{% endcodeeditor %}
 

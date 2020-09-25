@@ -9,5 +9,7 @@ var textfps = qcanvas.qtext.text({
 })
 ```
 
+{% codeeditor   src='./example/text.html', height="500",maxLines="500", readOnly='true', theme='github' %}
 
+{% endcodeeditor %}
 

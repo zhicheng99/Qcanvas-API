@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		canvas{
+			background: #eee;
+		}
+	</style>
+</head>
+<body>
+<canvas id="qcanvas"></canvas>
+<script type="text/javascript" src="./example/js/Qcanvas.js"></script>
+<script type="text/javascript">
+	var qcanvas = new Qcanvas(["qcanvas",300,200]);
+	var greenRect = qcanvas.qrect.rect({
+		start:[0,0],
+		width:200,
+		height:200,
+		// drag:false,
+		borderColor:'green',
+		fillColor:'green', 
+	})
+
+	var redRect = qcanvas.qrect.rect({
+		start:[100,100],
+		width:50,
+		height:50,
+		borderColor:'red',
+		fillColor:'red', 
+		// degree:30
+		// drag:false
+	}) 
+
+
+
+
+
+
+
+	var blueRect = qcanvas.qrect.rect({
+		start:[120,140],
+		width:50,
+		height:50,
+		borderColor:'blue',
+		fillColor:'blue',
+		degree:30
+		// drag:false
+	})
+
+ 
+
+
+
+
+ 
+
+
+	//layer元素
+	var layer = qcanvas.qlayer.layer(); 
+
+	layer.push(redRect,blueRect);
+
+	// layer.push(blueRect);
+ 
+	
+	layer.raise(redRect);
+
+
+
+
+	qcanvas.load({			
+		"person":"./example/img/spirit1.png",
+	},function(){
+		
+			var spiritSource = qcanvas.getSourceByName("person"); 
+
+			var s = qcanvas.qspirit.spirit({
+				img:spiritSource,
+				row:1,
+				column:8,
+				framesIndex:[0,0],
+				tStart:[0,120],
+				tWidth:40,
+				tHeight:64,
+				isLoop:true,
+				during:1,
+				mouseup:function(){
+					console.log(this);
+					console.log('触发mouseup事件');
+				}
+			})
+
+			var t = qcanvas.qtext.text({
+				start:s.tStart,
+				text:'我是来自layer容器里spirit',
+				color:'#000',
+				pointerEvent:'none' 
+			})
+			
+
+
+			layer.push(t);
+			layer.push(s);
+					
+	})
+ 
+
+ console.log(layer)
+
+
+	qcanvas.qtext.text({
+		start:[200,20],
+		text:'greenRect上移一层',
+		color:"yellow",
+		drag:false,
+		mouseup:function(){
+			qcanvas.raise(greenRect);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,40],
+		text:'greenRect下移一层',
+		color:"yellow",
+
+		drag:false,
+		mouseup:function(){
+			qcanvas.lower(greenRect);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,60],
+		text:'redRect上移一层',
+		color:"yellow",
+
+		drag:false,
+		mouseup:function(){
+			layer.raise(redRect);
+		}
+	})
+	qcanvas.qtext.text({
+		start:[200,80],
+		text:'redRect下移一层',
+		color:"yellow",
+
+		drag:false,
+		mouseup:function(){
+			layer.lower(redRect);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,100],
+		text:'layer下移一层',
+		color:"yellow",
+
+		drag:false,
+		mouseup:function(){
+			qcanvas.lower(layer);
+		}
+	})
+
+	qcanvas.qtext.text({
+		start:[200,120],
+		text:'layer上移一层',
+		color:"yellow",
+
+		drag:false,
+		mouseup:function(){
+			qcanvas.raise(layer); 
+		}
+	})
+</script>
+</body>
+</html>

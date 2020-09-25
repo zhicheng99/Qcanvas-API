@@ -7,3 +7,6 @@ var group = qcanvas.qgroup.group\(\)
 
 元素还是一直重绘在主canvas上
 
+{% codeeditor   src='./example/group.html', height="500",maxLines="500", readOnly='true', theme='github' %}
+
+{% endcodeeditor %}
