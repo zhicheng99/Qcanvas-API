@@ -11,6 +11,7 @@
 | 6 | lowerToBottom | Object | 把元素层级置底\(参数为元素对象\) |
 | 7 | raise | Object | 把元素提高一个层级\(参数为元素对象\) |
 | 8 | raiseToTop | Object | 把元素层级置顶\(参数为元素对象\) |
+| 9 | destroy | 无 | 清空layer.elements |
 
 > ##### 1、push
 >
