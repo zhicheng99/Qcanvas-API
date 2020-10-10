@@ -1,5 +1,5 @@
 序号|名称|类型|是否必需（创建对象）| 说明
----|---|---|---
+---|---|---|---|---
 1|qarcVersion|String|否（自动生成）| Qarc类版本号
 2|qcanvas|Object|否（自动生成）| Qcanvas类实例
 3|TYPE|String|否（自动生成）| 圆类型标记 'arc' （注：不允许修改）
@@ -23,21 +23,7 @@
 21|touchend|Fun|否|事件
 22|like|String|否|边线的样式（'-':实线 '--':虚线）
 23|dragRange|Array|否|限制拖动的区域(限制start的值) 必须为两个坐标点[[左上角x,左上角y]，[右下角x,右下角y]]
-| 24 | mouseenter | Fun | 否 | 事件 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+24| Mouseenter | Fun | 否 | 事件 
 
 
 
