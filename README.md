@@ -66,4 +66,6 @@ Qlayer元素类
 >
 > 使用script标签直接引用
 
+Qcanvas整体架构图
 
+![](assets/下载 (9).png)
