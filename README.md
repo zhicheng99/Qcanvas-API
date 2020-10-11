@@ -68,4 +68,4 @@ Qlayer元素类
 
 Qcanvas整体架构图
 
-![](assets/下载 (9).png)
+![](assets/jg.png)
