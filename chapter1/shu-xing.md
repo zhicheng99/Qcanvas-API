@@ -8,7 +8,7 @@
 6|qline|Object|否(自动生成)|Qline类的实例| 
 7|qtext|Object|否(自动生成)|Qtext类的实例| 
 8|qrect|Object|否(自动生成)|Qrect类的实例| 
-9|delayRender|Boolean|否(自动生成)|是否开启延时渲染| 
+9|delayRender|Boolean|否|是否开启延时渲染(默认false)| 
 10|qarc|Object|否(自动生成)|Qarc类的实例| 
 11|qpolygon|Object|否(自动生成)|Qpolygon类的实例| 
 12|qanimation|Object|否(自动生成)|Qanimation类的实例| 
