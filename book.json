@@ -12,7 +12,8 @@
          "sidebar-style",
          "auto-scroll-table",
          "code-editor",
-         "code"
+         "code",
+         "lightbox"
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {
