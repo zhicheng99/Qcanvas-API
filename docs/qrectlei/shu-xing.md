@@ -25,6 +25,7 @@
 | 23 | rotate | Boolean | 否 | 是否启用角度控制控件 |
 | 24 | dashed | Boolean | 否 | 边线是否为虚线 |
 | 25 | mouseenter | Fun | 否 | 事件 |
+| 27 | dblclick | Fun | 否 | 事件 |
 
 
 ---

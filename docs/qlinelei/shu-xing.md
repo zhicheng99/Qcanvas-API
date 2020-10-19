@@ -20,7 +20,8 @@
 | 18 | touchmove | Fun | 否 | 事件 |
 | 19 | touchend | Fun | 否 | 事件 |
 | 20 | mouseenter | Fun | 否 | 事件 |
-| 21 | withTextId | Number | 否 | 通过withText生成的文本对象id (如果配置了withText，会自动生成该属性，否则没有不存在该属性) |
+| 21 | withTextId | Number | 否 | 通过withText生成的文本对象id (如果配置了withText，会自动生成该属性) |
+| 22 | dblclick | Fun | 否 | 事件 |
 
 > ##### 1、qlineVersion\(String\)
 >

@@ -14,6 +14,7 @@ var qcanvas = new Qcanvas(
     mouseup:function(){},
     mouseout:function(){}
     mouseenter:function(){},
+    dblclick:function(){},
     delayRender:true
 }
 );

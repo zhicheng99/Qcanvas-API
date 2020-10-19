@@ -17,6 +17,7 @@
 15|touchmove|Fun|否|事件
 16|touchend|Fun|否|事件
 17 | mouseenter | Fun | 否 | 事件
+18 | dblclick | Fun | 否 | 事件 
 
 
 

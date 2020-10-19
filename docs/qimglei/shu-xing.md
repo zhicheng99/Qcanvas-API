@@ -21,6 +21,7 @@
 | 19 | touchend | Fun | 否 | 事件 |
 | 20 | degree | Number | 否 | 旋转角度（-360~360） |
 | 21 | mouseenter | Fun | 否 | 事件 |
+| 22 | dblclick | Fun | 否 | 事件 |
 
 
 

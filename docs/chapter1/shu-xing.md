@@ -26,6 +26,7 @@
 24|mouseup|Fun|否|事件
 25|mouseout|Fun|否|事件
 26|mousedown|Fun|否|事件
+27|dblclick|Fun|否|事件
 
 
 > ##### 1、qcanvasVersion(String)

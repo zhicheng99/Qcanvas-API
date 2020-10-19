@@ -22,6 +22,7 @@
 | 20 | degree | Number | 否 | 旋转角度（-360~360） |
 | 21 | lineHeight | String | 否 | 行高 |
 | 22 | mouseenter | Fun | 否 | 事件 |
+| 23 | dblclick | Fun | 否 | 事件 |
 
 
 
