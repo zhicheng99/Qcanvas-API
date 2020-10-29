@@ -1,4 +1,4 @@
-##### 创建line对象
+##### 创建二次贝塞尔曲线quadraticCurve对象
 
 ```
 this.qcanvas.qquadraticCurve.quadraticCurve({
