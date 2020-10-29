@@ -34,4 +34,7 @@
   * [方法](qgrouplei/fang-fa.md)
 * [Qpolygon类](qpolygonlei.md)
   * [属性](qpolygonlei/shu-xing.md)
+* [QquadraticCurve类](qquadraticCurve.md)
+  * [属性](qquadraticCurve/shu-xing.md)
+  * [方法](qquadraticCurve/fang-fa.md)
 

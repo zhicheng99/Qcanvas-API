@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>方法 · Qcanvas V1.0使用文档</title>
+        <title>QquadraticCurve类 · Qcanvas V1.0使用文档</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,10 +77,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="qgrouplei.html" />
+    <link rel="next" href="qquadraticCurve/shu-xing.html" />
     
     
-    <link rel="prev" href="shu-xing.html" />
+    <link rel="prev" href="qpolygonlei/shu-xing.html" />
     
 
     </head>
@@ -541,7 +541,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.11.2" data-path="fang-fa.html">
+        <li class="chapter " data-level="1.11.2" data-path="fang-fa.html">
             
                 <a href="fang-fa.html">
             
@@ -623,7 +623,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14" data-path="qquadraticCurve.html">
+        <li class="chapter active" data-level="1.14" data-path="qquadraticCurve.html">
             
                 <a href="qquadraticCurve.html">
             
@@ -698,7 +698,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >方法</a>
+        <a href="." >QquadraticCurve类</a>
     </h1>
 </div>
 
@@ -713,79 +713,150 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x6CE8;&#xFF1A;&#x65B9;&#x6CD5;&#x662F;&#x6839;&#x636E;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#xFF0C;&#x7ED9;&#x5BF9;&#x8C61;&#x8D4B;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4E5F;&#x4F1A;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x7684;&#x65B9;&#x6CD5;<br>&#x683C;&#x5F0F;&#x4E3A; set+&#x5C5E;&#x6027;&#x540D;&#x79F0;&#xFF08;&#x9996;&#x5B57;&#x6BCD;&#x4F1A;&#x81EA;&#x52A8;&#x8F6C;&#x6210;&#x5927;&#x5199;&#xFF09;</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x5E8F;&#x53F7;</th>
-<th style="text-align:left">&#x540D;&#x79F0;</th>
-<th style="text-align:left">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
-<th style="text-align:left">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1</td>
-<td style="text-align:left">push</td>
-<td style="text-align:left">Object</td>
-<td style="text-align:left">&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x5230;Qlayer&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x4E2D;(&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x5BF9;&#x8C61;&#x4EE5;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x5373;&#x53EF;)</td>
-</tr>
-<tr>
-<td style="text-align:left">2</td>
-<td style="text-align:left">getEleById</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">&#x901A;&#x8FC7;Id&#x83B7;&#x53D6;&#x5230;&#x5143;&#x7D20;&#x5BF9;&#x8C61;</td>
-</tr>
-<tr>
-<td style="text-align:left">3</td>
-<td style="text-align:left">removeEle</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">&#x5220;&#x9664;&#x5143;&#x7D20;&#x5BF9;&#x8C61;</td>
-</tr>
-<tr>
-<td style="text-align:left">4</td>
-<td style="text-align:left">getIndexById</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">&#x901A;&#x8FC7;Id&#x5F97;&#x5230;&#x5143;&#x7D20;&#x5728;elements&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7D22;&#x5F15;</td>
-</tr>
-<tr>
-<td style="text-align:left">5</td>
-<td style="text-align:left">lower</td>
-<td style="text-align:left">Object</td>
-<td style="text-align:left">&#x628A;&#x5143;&#x7D20;&#x964D;&#x4F4E;&#x4E00;&#x4E2A;&#x5C42;&#x7EA7; (&#x53C2;&#x6570;&#x4E3A;&#x5143;&#x7D20;&#x5BF9;&#x8C61;)</td>
-</tr>
-<tr>
-<td style="text-align:left">6</td>
-<td style="text-align:left">lowerToBottom</td>
-<td style="text-align:left">Object</td>
-<td style="text-align:left">&#x628A;&#x5143;&#x7D20;&#x5C42;&#x7EA7;&#x7F6E;&#x5E95;(&#x53C2;&#x6570;&#x4E3A;&#x5143;&#x7D20;&#x5BF9;&#x8C61;)</td>
-</tr>
-<tr>
-<td style="text-align:left">7</td>
-<td style="text-align:left">raise</td>
-<td style="text-align:left">Object</td>
-<td style="text-align:left">&#x628A;&#x5143;&#x7D20;&#x63D0;&#x9AD8;&#x4E00;&#x4E2A;&#x5C42;&#x7EA7;(&#x53C2;&#x6570;&#x4E3A;&#x5143;&#x7D20;&#x5BF9;&#x8C61;)</td>
-</tr>
-<tr>
-<td style="text-align:left">8</td>
-<td style="text-align:left">raiseToTop</td>
-<td style="text-align:left">Object</td>
-<td style="text-align:left">&#x628A;&#x5143;&#x7D20;&#x5C42;&#x7EA7;&#x7F6E;&#x9876;(&#x53C2;&#x6570;&#x4E3A;&#x5143;&#x7D20;&#x5BF9;&#x8C61;)</td>
-</tr>
-<tr>
-<td style="text-align:left">9</td>
-<td style="text-align:left">destroy</td>
-<td style="text-align:left">&#x65E0;</td>
-<td style="text-align:left">&#x6E05;&#x7A7A;layer.elements</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<h5 id="1&#x3001;push">1&#x3001;push</h5>
-<p>var layer = qcanvas.qlayer.layer();<br>var text = qcanvas.qtext.text({<br>        start:[100,100],<br>        text:&apos;&#x6211;&#x662F;&#x6765;&#x81EA;layer&#x5BB9;&#x5668;&#x91CC;&#x7684;&#x6587;&#x5B57;&apos;,<br>        color:&apos;red&apos;<br>    })<br>layer.push(text);  //&#x6DFB;&#x52A0;&#x6587;&#x672C;&#x5BF9;&#x8C61;&#x5230;layer&#x4E2D;</p>
-</blockquote>
+                                <h5 id="&#x521B;&#x5EFA;line&#x5BF9;&#x8C61;">&#x521B;&#x5EFA;line&#x5BF9;&#x8C61;</h5>
+<pre><code>this.qcanvas.qquadraticCurve.quadraticCurve({
+        start:[20,20],
+        handler:[100,200],
+        end:[100,20],
+        width:1,
+        like:&apos;&lt;--&gt;&apos;,
+        color:&apos;red&apos;,
+        drag:true,
+        withText:&apos;fsfds&apos;
+    })
+</code></pre><p>
+    </p><div class="zc-editor" data-id="13" data-single-tab="false">
+      <div class="zc-top blue">
+        <div class="zc-actions">
+          <div class="zc-btn" data-text="JSFiddle" onclick="exportToCodepen(13);">
+            <div>Export</div>
+          </div>
+        </div>
+        
+        <div class="zc-commands">
+          <div id="html-btn13" class="zc-btn" onclick="toggle(&apos;html&apos;, 13)">HTML</div>
+          <!--<div id="js-btn13" class="zc-btn" onclick="toggle('js', 13)">JavaScript</div>-->
+          <!--<div id="css-btn13" class="zc-btn" onclick="toggle('css', 13)">CSS</div>-->
+          <div id="result-btn13" class="zc-btn" onclick="toggle(&apos;result&apos;, 13)">Result</div>
+        </div>
+      </div>
+      <div class="zc-content">
+        <div id="html13" class="zc-cont" style="display:none; ">
+          <div class="editor" id="codeeditor13" data-settings="{&quot;readOnly&quot;:&quot;true&quot;,&quot;mode&quot;:&quot;html&quot;,&quot;theme&quot;:&quot;github&quot;,&quot;maxLines&quot;:&quot;500&quot;}">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		canvas{
+			background: #eee;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;canvas id=&quot;qcanvas&quot;&gt;&lt;/canvas&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./example/js/Qcanvas.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var qcanvas = new Qcanvas([&quot;qcanvas&quot;,300,200]);
+	 
+
+	 qcanvas.qquadraticCurve.quadraticCurve({
+		start:[20,20],
+		handler:[100,200],
+		end:[100,20],
+		width:1,
+		like:&apos;&lt;--&gt;&apos;,
+		color:&apos;red&apos;,
+		drag:true,
+		withText:&apos;&#x6211;&#x662F;&#x4E2A;&#x4E8C;&#x6B21;&#x66F2;&#x7EBF;&apos;
+	}) 
+
+
+     qcanvas.qquadraticCurve.quadraticCurve({
+		start:[200,100],
+		handler:[230,150],
+		end:[230,80],
+		width:1,
+		like:&apos;-&gt;&apos;,
+		color:&apos;blue&apos;,
+		drag:true,
+		withText:&apos;&#x6211;&#x4E5F;&#x662F;&#x4E2A;&#x4E8C;&#x6B21;&#x66F2;&#x7EBF;&apos;
+	}) 
+
+     
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+        </div><div id="result13" class="zc-cont" style="overflow:hidden;" data-height="500px"></div>
+        <div id="js13" class="zc-cont" style="display:none">
+          <pre id="js-code13" class="prettyprint linenums"></pre>
+        </div>
+  
+        <div id="css13" class="zc-cont" style="display:none">
+          <pre id="css-code13" class="prettyprint linenums"></pre>
+        </div>
+  
+      </div>
+  
+      <input type="hidden" id="init-html13" value="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		canvas{
+			background: #eee;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;canvas id=&quot;qcanvas&quot;&gt;&lt;/canvas&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./example/js/Qcanvas.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var qcanvas = new Qcanvas([&quot;qcanvas&quot;,300,200]);
+	 
+
+	 qcanvas.qquadraticCurve.quadraticCurve({
+		start:[20,20],
+		handler:[100,200],
+		end:[100,20],
+		width:1,
+		like:&apos;&lt;--&gt;&apos;,
+		color:&apos;red&apos;,
+		drag:true,
+		withText:&apos;&#x6211;&#x662F;&#x4E2A;&#x4E8C;&#x6B21;&#x66F2;&#x7EBF;&apos;
+	}) 
+
+
+     qcanvas.qquadraticCurve.quadraticCurve({
+		start:[200,100],
+		handler:[230,150],
+		end:[230,80],
+		width:1,
+		like:&apos;-&gt;&apos;,
+		color:&apos;blue&apos;,
+		drag:true,
+		withText:&apos;&#x6211;&#x4E5F;&#x662F;&#x4E2A;&#x4E8C;&#x6B21;&#x66F2;&#x7EBF;&apos;
+	}) 
+
+     
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+      <input type="hidden" id="init-css13" value="">
+      <input type="hidden" id="init-js13" value="">
+      <input type="hidden" id="init-active13" value="html">
+  
+      <div style="display:none;">
+        <form method="post" id="codepen-form13" action="//codepen.io/pen/define" target="check">
+          <input id="codepen-data13" type="hidden" name="data">
+          <input type="hidden" name="wrap" value="l">
+        </form>
+      </div>
+    </div>
+  <p></p>
 <footer class="page-footer"><span class="copyright">&#xA9; Qcanvas all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-10-09 08:34:11
+2020-10-29 17:29:34
 </span></footer>
                                 
                                 </section>
@@ -813,12 +884,12 @@
 
             
                 
-                <a href="shu-xing.html" class="navigation navigation-prev " aria-label="Previous page: 属性">
+                <a href="qpolygonlei/shu-xing.html" class="navigation navigation-prev " aria-label="Previous page: 属性">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="qgrouplei.html" class="navigation navigation-next " aria-label="Next page: Qgroup类">
+                <a href="qquadraticCurve/shu-xing.html" class="navigation navigation-next " aria-label="Next page: 属性">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -829,7 +900,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"方法","level":"1.11.2","depth":2,"next":{"title":"Qgroup类","level":"1.12","depth":1,"path":"qgrouplei.md","ref":"qgrouplei.md","articles":[{"title":"方法","level":"1.12.1","depth":2,"path":"qgrouplei/fang-fa.md","ref":"qgrouplei/fang-fa.md","articles":[]}]},"previous":{"title":"属性","level":"1.11.1","depth":2,"path":"shu-xing.md","ref":"shu-xing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor","code","lightbox"],"styles":{"website":"example/style/website.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas V1.0使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas V1.0使用文档","output.name":"Qcanvas V1.0使用文档","gitbook":"*","description":"Qcanvas V1.0使用文档"},"file":{"path":"fang-fa.md","mtime":"2020-10-09T00:34:11.882Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-29T09:44:54.997Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"QquadraticCurve类","level":"1.14","depth":1,"next":{"title":"属性","level":"1.14.1","depth":2,"path":"qquadraticCurve/shu-xing.md","ref":"qquadraticCurve/shu-xing.md","articles":[]},"previous":{"title":"属性","level":"1.13.1","depth":2,"path":"qpolygonlei/shu-xing.md","ref":"qpolygonlei/shu-xing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor","code","lightbox"],"styles":{"website":"example/style/website.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas V1.0使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas V1.0使用文档","output.name":"Qcanvas V1.0使用文档","gitbook":"*","description":"Qcanvas V1.0使用文档"},"file":{"path":"qquadraticCurve.md","mtime":"2020-10-29T09:29:34.534Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-29T09:44:54.997Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
