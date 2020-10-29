@@ -13,7 +13,7 @@ Qcanvas主类 随时完善
 > Qpolygon类 基本功能完成  
 > Qshape类 基本功能完成  
 > Qimg类 基本功能完成  
-> Qspirit类 基本功能完成
+> Qspirit类 基本功能完成  
 > QquadraticCurve类 基本功能完成
 
 容器类
