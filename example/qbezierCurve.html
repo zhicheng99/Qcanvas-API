@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		canvas{
+			background: #eee;
+		}
+	</style>
+</head>
+<body>
+<canvas id="qcanvas"></canvas>
+<script type="text/javascript" src="./example/js/Qcanvas.js"></script>
+<script type="text/javascript">
+	var qcanvas = new Qcanvas(["qcanvas",300,200]);
+	 
+
+	qcanvas.qbezierCurve.bezierCurve({
+		start:[20,20],
+		handler1:[50,80],
+		handler2:[100,20],
+		end:[200,20],
+		width:1,
+		like:'<-->',
+		color:'red',
+		drag:true,
+		withText:'我是个三次曲线'
+	})
+
+     
+</script>
+</body>
+</html>

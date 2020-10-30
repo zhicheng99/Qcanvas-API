@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Qgroup类 · Qcanvas V1.0使用文档</title>
+        <title>QbezierCurve类 · Qcanvas V1.0使用文档</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,10 +77,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="qgrouplei/fang-fa.html" />
+    <link rel="next" href="qbezierCurve/shu-xing.html" />
     
     
-    <link rel="prev" href="fang-fa.html" />
+    <link rel="prev" href="qquadraticCurve/fang-fa.html" />
     
 
     </head>
@@ -559,7 +559,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12" data-path="qgrouplei.html">
+        <li class="chapter " data-level="1.12" data-path="qgrouplei.html">
             
                 <a href="qgrouplei.html">
             
@@ -668,7 +668,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="qbezierCurve.html">
+        <li class="chapter active" data-level="1.15" data-path="qbezierCurve.html">
             
                 <a href="qbezierCurve.html">
             
@@ -743,7 +743,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Qgroup类</a>
+        <a href="." >QbezierCurve类</a>
     </h1>
 </div>
 
@@ -758,29 +758,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>var group = qcanvas.qgroup.group()</p>
-<p>&#x5206;&#x7EC4;group&#x5B9E;&#x4F8B;&#x662F;&#x62BD;&#x8C61;&#x51FA;&#x6765;&#x7684;&#x5143;&#x7D20; &#x53EA;&#x5728;&#x903B;&#x8F91;&#x4E0A;&#x628A;&#x4E00;&#x4E9B;&#x5143;&#x7D20;&#x96C6;&#x5408;&#x5230;&#x4E00;&#x5757;&#xFF0C;<br>&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x6392;&#x4E86;&#x4E00;&#x4E0B;&#x987A;&#x5E8F; &#x53EA;&#x662F;&#x628A;&#x4E00;&#x7EC4;&#x5143;&#x7D20;&#x653E;&#x4E00;&#x5757;&#x4E86;</p>
-<p>&#x5982;group&#x662F;&#x7B2C;2&#x4E2A;&#x521B;&#x5EFA;&#x7684;&#x5143;&#x7D20; &#x90A3;&#x4E48;&#x53EA;&#x8981;&#x662F;push&#x5230;group&#x91CC;&#x7684;&#x5143;&#x7D20;&#x4F9D;&#x6B21;&#x5F80;&#x540E;&#x6392;2,3,4.....  &#x522B;&#x7684;&#x5143;&#x7D20;&#x4E00;&#x5E76;&#x5F80;&#x540E;&#x79FB;&#x52A8;&#x4F4D;&#x7F6E;</p>
-<p>&#x5143;&#x7D20;&#x8FD8;&#x662F;&#x4E00;&#x76F4;&#x91CD;&#x7ED8;&#x5728;&#x4E3B;canvas&#x4E0A;</p>
-<p>
-    </p><div class="zc-editor" data-id="11" data-single-tab="false">
+                                <h5 id="&#x521B;&#x5EFA;&#x4E09;&#x6B21;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;beziercurve&#x5BF9;&#x8C61;">&#x521B;&#x5EFA;&#x4E09;&#x6B21;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;bezierCurve&#x5BF9;&#x8C61;</h5>
+<pre><code>qcanvas.qbezierCurve.bezierCurve({
+        start:[20,20],
+        handler1:[50,80],
+        handler2:[100,20],
+        end:[200,20],
+        width:1,
+        like:&apos;&lt;--&gt;&apos;,
+        color:&apos;red&apos;,
+        drag:true,
+        withText:&apos;&#x6211;&#x662F;&#x4E2A;&#x4E09;&#x6B21;&#x66F2;&#x7EBF;&apos;
+    })
+</code></pre><p>
+    </p><div class="zc-editor" data-id="14" data-single-tab="false">
       <div class="zc-top blue">
         <div class="zc-actions">
-          <div class="zc-btn" data-text="JSFiddle" onclick="exportToCodepen(11);">
+          <div class="zc-btn" data-text="JSFiddle" onclick="exportToCodepen(14);">
             <div>Export</div>
           </div>
         </div>
         
         <div class="zc-commands">
-          <div id="html-btn11" class="zc-btn" onclick="toggle(&apos;html&apos;, 11)">HTML</div>
-          <!--<div id="js-btn11" class="zc-btn" onclick="toggle('js', 11)">JavaScript</div>-->
-          <!--<div id="css-btn11" class="zc-btn" onclick="toggle('css', 11)">CSS</div>-->
-          <div id="result-btn11" class="zc-btn" onclick="toggle(&apos;result&apos;, 11)">Result</div>
+          <div id="html-btn14" class="zc-btn" onclick="toggle(&apos;html&apos;, 14)">HTML</div>
+          <!--<div id="js-btn14" class="zc-btn" onclick="toggle('js', 14)">JavaScript</div>-->
+          <!--<div id="css-btn14" class="zc-btn" onclick="toggle('css', 14)">CSS</div>-->
+          <div id="result-btn14" class="zc-btn" onclick="toggle(&apos;result&apos;, 14)">Result</div>
         </div>
       </div>
       <div class="zc-content">
-        <div id="html11" class="zc-cont" style="display:none; ">
-          <div class="editor" id="codeeditor11" data-settings="{&quot;readOnly&quot;:&quot;true&quot;,&quot;mode&quot;:&quot;html&quot;,&quot;theme&quot;:&quot;github&quot;,&quot;maxLines&quot;:&quot;500&quot;}">&lt;!DOCTYPE html&gt;
+        <div id="html14" class="zc-cont" style="display:none; ">
+          <div class="editor" id="codeeditor14" data-settings="{&quot;readOnly&quot;:&quot;true&quot;,&quot;mode&quot;:&quot;html&quot;,&quot;theme&quot;:&quot;github&quot;,&quot;maxLines&quot;:&quot;500&quot;}">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 	&lt;meta charset=&quot;utf-8&quot;&gt;
@@ -796,168 +804,36 @@
 &lt;script type=&quot;text/javascript&quot; src=&quot;./example/js/Qcanvas.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var qcanvas = new Qcanvas([&quot;qcanvas&quot;,300,200]);
-	var greenRect = qcanvas.qrect.rect({
-		start:[0,0],
-		width:200,
-		height:200,
-		drag:false,
-		borderColor:&apos;green&apos;,
-		fillColor:&apos;green&apos;, 
+	 
+
+	qcanvas.qbezierCurve.bezierCurve({
+		start:[20,20],
+		handler1:[50,80],
+		handler2:[100,20],
+		end:[200,20],
+		width:1,
+		like:&apos;&lt;--&gt;&apos;,
+		color:&apos;red&apos;,
+		drag:true,
+		withText:&apos;&#x6211;&#x662F;&#x4E2A;&#x4E09;&#x6B21;&#x66F2;&#x7EBF;&apos;
 	})
 
-	var redRect = qcanvas.qrect.rect({
-		start:[100,100],
-		width:50,
-		height:50,
-		borderColor:&apos;red&apos;,
-		fillColor:&apos;red&apos;, 
-		// degree:30
-		// drag:false
-	}) 
-
-	var blueRect = qcanvas.qrect.rect({
-		start:[120,140],
-		width:50,
-		height:50,
-		borderColor:&apos;blue&apos;,
-		fillColor:&apos;blue&apos;,
-		// drag:false
-	})
-
- 
-
-
-
-
- 
-
-
-	//layer&#x5143;&#x7D20;
-	var group = qcanvas.qgroup.group();
-	console.log(group);
-
-	group.push(redRect);
-
-	group.push(blueRect);
-
-
-
-
-	qcanvas.load({			
-		&quot;person&quot;:&quot;./example/img/spirit1.png&quot;,
-	},function(){
-		
-			var spiritSource = qcanvas.getSourceByName(&quot;person&quot;); 
-
-			var s = qcanvas.qspirit.spirit({
-				img:spiritSource,
-				row:1,
-				column:8,
-				framesIndex:[0,0],
-				tStart:[0,120],
-				tWidth:40,
-				tHeight:64,
-				isLoop:true,
-				during:1,
-				mouseup:function(){
-					console.log(this);
-					console.log(&apos;&#x89E6;&#x53D1;mouseup&#x4E8B;&#x4EF6;&apos;);
-				}
-			})
-
-			var t = qcanvas.qtext.text({
-				start:s.tStart,
-				text:&apos;&#x6211;&#x662F;&#x6765;&#x81EA;group&#x5BB9;&#x5668;&#x91CC;spirit&apos;,
-				color:&apos;#000&apos;,
-				pointerEvent:&apos;none&apos; 
-			})
-			
-
-
-			group.push(t);
-			group.push(s);
-					
-	})
-
-
-	qcanvas.qtext.text({
-		start:[200,20],
-		text:&apos;greenRect&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-		drag:false,
-		mouseup:function(){
-			qcanvas.raise(greenRect);
-		}
-	})
-
-	qcanvas.qtext.text({
-		start:[200,40],
-		text:&apos;greenRect&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			qcanvas.lower(greenRect);
-		}
-	})
-
-	qcanvas.qtext.text({
-		start:[200,60],
-		text:&apos;redRect&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			group.raise(redRect);
-		}
-	})
-	qcanvas.qtext.text({
-		start:[200,80],
-		text:&apos;redRect&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			group.lower(redRect);
-		}
-	})
-
-	qcanvas.qtext.text({
-		start:[200,100],
-		text:&apos;group&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			qcanvas.lower(group);
-		}
-	})
-
-	qcanvas.qtext.text({
-		start:[200,120],
-		text:&apos;group&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			qcanvas.raise(group);
-		}
-	})
+     
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</div>
-        </div><div id="result11" class="zc-cont" style="overflow:hidden;" data-height="500px"></div>
-        <div id="js11" class="zc-cont" style="display:none">
-          <pre id="js-code11" class="prettyprint linenums"></pre>
+        </div><div id="result14" class="zc-cont" style="overflow:hidden;" data-height="500px"></div>
+        <div id="js14" class="zc-cont" style="display:none">
+          <pre id="js-code14" class="prettyprint linenums"></pre>
         </div>
   
-        <div id="css11" class="zc-cont" style="display:none">
-          <pre id="css-code11" class="prettyprint linenums"></pre>
+        <div id="css14" class="zc-cont" style="display:none">
+          <pre id="css-code14" class="prettyprint linenums"></pre>
         </div>
   
       </div>
   
-      <input type="hidden" id="init-html11" value="&lt;!DOCTYPE html&gt;
+      <input type="hidden" id="init-html14" value="&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 	&lt;meta charset=&quot;utf-8&quot;&gt;
@@ -973,170 +849,38 @@
 &lt;script type=&quot;text/javascript&quot; src=&quot;./example/js/Qcanvas.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var qcanvas = new Qcanvas([&quot;qcanvas&quot;,300,200]);
-	var greenRect = qcanvas.qrect.rect({
-		start:[0,0],
-		width:200,
-		height:200,
-		drag:false,
-		borderColor:&apos;green&apos;,
-		fillColor:&apos;green&apos;, 
+	 
+
+	qcanvas.qbezierCurve.bezierCurve({
+		start:[20,20],
+		handler1:[50,80],
+		handler2:[100,20],
+		end:[200,20],
+		width:1,
+		like:&apos;&lt;--&gt;&apos;,
+		color:&apos;red&apos;,
+		drag:true,
+		withText:&apos;&#x6211;&#x662F;&#x4E2A;&#x4E09;&#x6B21;&#x66F2;&#x7EBF;&apos;
 	})
 
-	var redRect = qcanvas.qrect.rect({
-		start:[100,100],
-		width:50,
-		height:50,
-		borderColor:&apos;red&apos;,
-		fillColor:&apos;red&apos;, 
-		// degree:30
-		// drag:false
-	}) 
-
-	var blueRect = qcanvas.qrect.rect({
-		start:[120,140],
-		width:50,
-		height:50,
-		borderColor:&apos;blue&apos;,
-		fillColor:&apos;blue&apos;,
-		// drag:false
-	})
-
- 
-
-
-
-
- 
-
-
-	//layer&#x5143;&#x7D20;
-	var group = qcanvas.qgroup.group();
-	console.log(group);
-
-	group.push(redRect);
-
-	group.push(blueRect);
-
-
-
-
-	qcanvas.load({			
-		&quot;person&quot;:&quot;./example/img/spirit1.png&quot;,
-	},function(){
-		
-			var spiritSource = qcanvas.getSourceByName(&quot;person&quot;); 
-
-			var s = qcanvas.qspirit.spirit({
-				img:spiritSource,
-				row:1,
-				column:8,
-				framesIndex:[0,0],
-				tStart:[0,120],
-				tWidth:40,
-				tHeight:64,
-				isLoop:true,
-				during:1,
-				mouseup:function(){
-					console.log(this);
-					console.log(&apos;&#x89E6;&#x53D1;mouseup&#x4E8B;&#x4EF6;&apos;);
-				}
-			})
-
-			var t = qcanvas.qtext.text({
-				start:s.tStart,
-				text:&apos;&#x6211;&#x662F;&#x6765;&#x81EA;group&#x5BB9;&#x5668;&#x91CC;spirit&apos;,
-				color:&apos;#000&apos;,
-				pointerEvent:&apos;none&apos; 
-			})
-			
-
-
-			group.push(t);
-			group.push(s);
-					
-	})
-
-
-	qcanvas.qtext.text({
-		start:[200,20],
-		text:&apos;greenRect&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-		drag:false,
-		mouseup:function(){
-			qcanvas.raise(greenRect);
-		}
-	})
-
-	qcanvas.qtext.text({
-		start:[200,40],
-		text:&apos;greenRect&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			qcanvas.lower(greenRect);
-		}
-	})
-
-	qcanvas.qtext.text({
-		start:[200,60],
-		text:&apos;redRect&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			group.raise(redRect);
-		}
-	})
-	qcanvas.qtext.text({
-		start:[200,80],
-		text:&apos;redRect&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			group.lower(redRect);
-		}
-	})
-
-	qcanvas.qtext.text({
-		start:[200,100],
-		text:&apos;group&#x4E0B;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			qcanvas.lower(group);
-		}
-	})
-
-	qcanvas.qtext.text({
-		start:[200,120],
-		text:&apos;group&#x4E0A;&#x79FB;&#x4E00;&#x5C42;&apos;,
-		color:&quot;yellow&quot;,
-
-		drag:false,
-		mouseup:function(){
-			qcanvas.raise(group);
-		}
-	})
+     
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;">
-      <input type="hidden" id="init-css11" value="">
-      <input type="hidden" id="init-js11" value="">
-      <input type="hidden" id="init-active11" value="html">
+      <input type="hidden" id="init-css14" value="">
+      <input type="hidden" id="init-js14" value="">
+      <input type="hidden" id="init-active14" value="html">
   
       <div style="display:none;">
-        <form method="post" id="codepen-form11" action="//codepen.io/pen/define" target="check">
-          <input id="codepen-data11" type="hidden" name="data">
+        <form method="post" id="codepen-form14" action="//codepen.io/pen/define" target="check">
+          <input id="codepen-data14" type="hidden" name="data">
           <input type="hidden" name="wrap" value="l">
         </form>
       </div>
     </div>
-   <p></p>
+  <p></p>
 <footer class="page-footer"><span class="copyright">&#xA9; Qcanvas all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-09-27 10:14:29
+2020-10-30 16:32:13
 </span></footer>
                                 
                                 </section>
@@ -1164,12 +908,12 @@
 
             
                 
-                <a href="fang-fa.html" class="navigation navigation-prev " aria-label="Previous page: 方法">
+                <a href="qquadraticCurve/fang-fa.html" class="navigation navigation-prev " aria-label="Previous page: 方法">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="qgrouplei/fang-fa.html" class="navigation navigation-next " aria-label="Next page: 方法">
+                <a href="qbezierCurve/shu-xing.html" class="navigation navigation-next " aria-label="Next page: 属性">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1180,7 +924,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Qgroup类","level":"1.12","depth":1,"next":{"title":"方法","level":"1.12.1","depth":2,"path":"qgrouplei/fang-fa.md","ref":"qgrouplei/fang-fa.md","articles":[]},"previous":{"title":"方法","level":"1.11.2","depth":2,"path":"fang-fa.md","ref":"fang-fa.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor","code","lightbox"],"styles":{"website":"example/style/website.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas V1.0使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas V1.0使用文档","output.name":"Qcanvas V1.0使用文档","gitbook":"*","description":"Qcanvas V1.0使用文档"},"file":{"path":"qgrouplei.md","mtime":"2020-09-27T02:14:29.011Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-30T08:41:07.180Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"QbezierCurve类","level":"1.15","depth":1,"next":{"title":"属性","level":"1.15.1","depth":2,"path":"qbezierCurve/shu-xing.md","ref":"qbezierCurve/shu-xing.md","articles":[]},"previous":{"title":"方法","level":"1.14.2","depth":2,"path":"qquadraticCurve/fang-fa.md","ref":"qquadraticCurve/fang-fa.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor","code","lightbox"],"styles":{"website":"example/style/website.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas V1.0使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas V1.0使用文档","output.name":"Qcanvas V1.0使用文档","gitbook":"*","description":"Qcanvas V1.0使用文档"},"file":{"path":"qbezierCurve.md","mtime":"2020-10-30T08:32:13.563Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-30T08:41:07.180Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

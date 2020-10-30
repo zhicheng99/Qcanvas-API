@@ -15,6 +15,7 @@ Qcanvas主类 随时完善
 > Qimg类 基本功能完成  
 > Qspirit类 基本功能完成  
 > QquadraticCurve类 基本功能完成
+> QbezierCurve类 基本功能完成
 
 容器类
 

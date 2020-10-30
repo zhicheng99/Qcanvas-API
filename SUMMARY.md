@@ -37,4 +37,7 @@
 * [QquadraticCurve类](qquadraticCurve.md)
   * [属性](qquadraticCurve/shu-xing.md)
   * [方法](qquadraticCurve/fang-fa.md)
+* [QbezierCurve类](qbezierCurve.md)
+  * [属性](qbezierCurve/shu-xing.md)
+  * [方法](qbezierCurve/fang-fa.md)
 

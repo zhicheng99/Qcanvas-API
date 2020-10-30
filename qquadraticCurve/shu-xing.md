@@ -10,17 +10,17 @@
 | 8    | like                   | String         | 否                   | 线的样式                                                     |
 | 9    | width                  | Number         | 否                   | 线的粗细                                                     |
 | 10   | withText               | String         | 否                   | 线带着的文本                                                 |
-| 1    | withTextAlign          | String         | 否                   | 线带着的文本的横向位置 \[left center\(默认\) right\]         |
-| 1    | drag                   | String/Boolean | 否                   | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'Horizontal':只可横向拖动） |
+| 11   | withTextAlign          | String         | 否                   | 线带着的文本的横向位置 \[left center\(默认\) right\]         |
+| 12   | drag                   | String/Boolean | 否                   | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'Horizontal':只可横向拖动） |
 | 13   | pointerEvent           | String         | 否                   | 是否响应事件（默认'auto':响应，'none':不响应）               |
-| 1    | mousedown              | Fun            | 否                   | 事件                                                         |
-| 1    | mousemove              | Fun            | 否                   | 事件                                                         |
+| 14   | mousedown              | Fun            | 否                   | 事件                                                         |
+| 15   | mousemove              | Fun            | 否                   | 事件                                                         |
 | 16   | mouseup                | Fun            | 否                   | 事件                                                         |
-| 1    | mouseout               | Fun            | 否                   | 事件                                                         |
-| 1    | touchstart             | Fun            | 否                   | 事件                                                         |
+| 17   | mouseout               | Fun            | 否                   | 事件                                                         |
+| 18   | touchstart             | Fun            | 否                   | 事件                                                         |
 | 19   | touchmove              | Fun            | 否                   | 事件                                                         |
 | 20   | touchend               | Fun            | 否                   | 事件                                                         |
-| 2    | mouseenter             | Fun            | 否                   | 事件                                                         |
+| 21   | mouseenter             | Fun            | 否                   | 事件                                                         |
 | 22   | withTextId             | Number         | 否                   | 通过withText生成的文本对象id (如果配置了withText，会自动生成该属性) |
 | 23   | dblclick               | Fun            | 否                   | 事件                                                         |
 
