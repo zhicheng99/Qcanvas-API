@@ -10,7 +10,8 @@ qcanvas.qbezierCurve.bezierCurve({
 		like:'<-->',
 		color:'red',
 		drag:true,
-		withText:'我是个三次曲线'
+		withText:'我是个三次曲线',
+		handlerShow:true
 	})
 ```
 

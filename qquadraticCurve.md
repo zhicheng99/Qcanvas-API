@@ -9,7 +9,8 @@ this.qcanvas.qquadraticCurve.quadraticCurve({
 		like:'<-->',
 		color:'red',
 		drag:true,
-		withText:'fsfds'
+		withText:'我是个二次曲线',
+		handlerShow:true
 	})
 ```
 

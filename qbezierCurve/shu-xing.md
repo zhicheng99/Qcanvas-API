@@ -24,6 +24,7 @@
 | 22   | mouseenter          | Fun            | 否                   | 事件                                                         |
 | 23    | withTextId          | Number         | 否                   | 通过withText生成的文本对象id (如果配置了withText，会自动生成该属性) |
 | 24   | dblclick            | Fun            | 否                   | 事件                                                         |
+| 25 | handlerShow | Boolean | 否 | 是否显示控制点 |
 
 > ##### 1、qbezierCurveVersion\(String\)
 >

@@ -23,6 +23,7 @@
 | 21   | mouseenter             | Fun            | 否                   | 事件                                                         |
 | 22   | withTextId             | Number         | 否                   | 通过withText生成的文本对象id (如果配置了withText，会自动生成该属性) |
 | 23   | dblclick               | Fun            | 否                   | 事件                                                         |
+| 24   | handlerShow            | Boolean        | 否                   | 是否显示控制点                                               |
 
 > ##### 1、qquadraticCurveVersion\(String\)
 >
