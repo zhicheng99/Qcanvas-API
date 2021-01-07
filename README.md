@@ -70,4 +70,4 @@ Qlayer元素类
 
 Qcanvas整体架构图
 
-![](assets/jg.png)
+![newjg](assets/newjg.png)
