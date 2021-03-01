@@ -71,3 +71,4 @@ Qlayer元素类
 Qcanvas整体架构图
 
 ![newjg](assets/newjg.png)
+
