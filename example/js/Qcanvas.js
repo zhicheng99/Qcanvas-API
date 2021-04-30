@@ -66,7 +66,7 @@ QquadraticCurve.prototype.quadraticCurve = function(options) {
  					
  					var x0,y0,x1,y1,x2,y2;
 						 
-						if(dragIsBool){
+						if(dragIsBool && this.drag){
 							 x0 = position.x-dis[0];
 							 y0 = position.y-dis[1];
 
@@ -76,7 +76,7 @@ QquadraticCurve.prototype.quadraticCurve = function(options) {
 							 x2 = position.x-dis[4];
 							 y2 = position.y-dis[5];
 
-						}else if(_this.qcanvas.dragAim.drag == 'vertical'){
+						}else if(this.drag == 'vertical'){
 							 x0 = start[0];
 							 y0 = position.y-dis[1];
 							 x1 = handler[0];
@@ -85,7 +85,7 @@ QquadraticCurve.prototype.quadraticCurve = function(options) {
 							 y2 = position.y-dis[5];
 
 
-						}else if(_this.qcanvas.dragAim.drag == 'horizontal'){
+						}else if(this.drag == 'horizontal'){
 							 x0 = position.x-dis[0];
 							 y0 = start[1];
 							 x1 = position.x-dis[2];
@@ -417,7 +417,7 @@ QbezierCurve.prototype.bezierCurve = function(options) {
  					
  					var x0,y0,x1,y1,x2,y2,x3,y3;
 						 
-						if(dragIsBool){
+						if(dragIsBool && this.drag){
 							 x0 = position.x-dis[0];
 							 y0 = position.y-dis[1];
 
@@ -430,7 +430,7 @@ QbezierCurve.prototype.bezierCurve = function(options) {
 							 x3 = position.x-dis[6];
 							 y3 = position.y-dis[7];
 
-						}else if(_this.qcanvas.dragAim.drag == 'vertical'){
+						}else if(this.drag == 'vertical'){
 							 x0 = start[0];
 							 y0 = position.y-dis[1];
 							 x1 = handler1[0];
@@ -440,7 +440,7 @@ QbezierCurve.prototype.bezierCurve = function(options) {
 							 x3 = end[0];
 							 y3 = position.y-dis[7];
 
-						}else if(_this.qcanvas.dragAim.drag == 'horizontal'){
+						}else if(this.drag == 'horizontal'){
 							 x0 = position.x-dis[0];
 							 y0 = start[1];
 							 x1 = position.x-dis[2];
@@ -858,7 +858,7 @@ Qline.prototype.line = function(options){
  					
  					var x1,y1,x2,y2;
 						 
-						if(dragIsBool){
+						if(dragIsBool && this.drag){
 							 x1 = position.x-dis[0];
 							 y1 = position.y-dis[1];
 
@@ -1426,23 +1426,24 @@ Qtext.prototype.text = function(options){
 
 				var x = 0;
 				var y = 0;
+				var start = _this.qcanvas.isFun(this.start)?this.start():this.start;
 
 
 				if(this.textAlign == 'left'){
-					x = this.range.width*0.5+this.start[0];
+					x = this.range.width*0.5+start[0];
 
 				}else if(this.textAlign == 'center'){
-					x = this.start[0];
+					x = start[0];
 				}else if(this.textAlign == 'right'){
-					x = this.start[0] - this.range.width*0.5;
+					x = start[0] - this.range.width*0.5;
 				}
 
 				if(this.textBaseline == 'top'){
-					y = this.range.height *0.5+this.start[1];
+					y = this.range.height *0.5+start[1];
 				}else if(this.textBaseline == 'middle'){
-					y = this.start[1];
+					y = start[1];
 				}else if(this.textBaseline == 'bottom'){
-					y = this.start[1] - this.range.height*0.5;
+					y = start[1] - this.range.height*0.5;
 				}
 
 				return {
@@ -1527,10 +1528,10 @@ Qtext.prototype.text = function(options){
 						var E_y = center.y-Math.sin(temp*Math.PI/180)*half_x;
 						 
 						return [
-							{x:E_x-Math.sin(temp*Math.PI/180)*half_y,y:E_y+Math.cos(temp*Math.PI/180)*half_y},
 							{x:E_x+Math.sin(temp*Math.PI/180)*half_y,y:E_y-Math.cos(temp*Math.PI/180)*half_y},
 							{x:center.x-(E_x-Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y+Math.cos(temp*Math.PI/180)*half_y)+center.y},
-							{x:center.x-(E_x+Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y-Math.cos(temp*Math.PI/180)*half_y)+center.y}
+							{x:center.x-(E_x+Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y-Math.cos(temp*Math.PI/180)*half_y)+center.y},
+							{x:E_x-Math.sin(temp*Math.PI/180)*half_y,y:E_y+Math.cos(temp*Math.PI/180)*half_y},
 						];
 
 
@@ -1547,10 +1548,10 @@ Qtext.prototype.text = function(options){
  
 
 						return [
-							{x:E_x-Math.sin(temp*Math.PI/180)*half_y,y:E_y-Math.cos(temp*Math.PI/180)*half_y},
 							{x:E_x+Math.sin(temp*Math.PI/180)*half_y,y:E_y+Math.cos(temp*Math.PI/180)*half_y},
 							{x:center.x-(E_x-Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y-Math.cos(temp*Math.PI/180)*half_y)+center.y},
-							{x:center.x-(E_x+Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y+Math.cos(temp*Math.PI/180)*half_y)+center.y}
+							{x:center.x-(E_x+Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y+Math.cos(temp*Math.PI/180)*half_y)+center.y},
+							{x:E_x-Math.sin(temp*Math.PI/180)*half_y,y:E_y-Math.cos(temp*Math.PI/180)*half_y},
 						]
 
 
@@ -1578,9 +1579,8 @@ Qtext.prototype.text = function(options){
 				var start = _this.qcanvas.isFun(this.start)?this.start():this.start;
 				// var range = _this.qcanvas.isFun(this.dragRange)?this.dragRange():this.dragRange;
 
-
 				var x,y;
-				if(dragIsBool){
+				if(dragIsBool && this.drag){
 					 x = position.x-dis[0];
 					 y = position.y-dis[1];
 
@@ -1760,10 +1760,10 @@ Qrect.prototype.rect = function(options){
 						var E_y = center.y-Math.sin(temp*Math.PI/180)*half_x;
 						 
 						return [
-							{x:E_x-Math.sin(temp*Math.PI/180)*half_y,y:E_y+Math.cos(temp*Math.PI/180)*half_y},
 							{x:E_x+Math.sin(temp*Math.PI/180)*half_y,y:E_y-Math.cos(temp*Math.PI/180)*half_y},
 							{x:center.x-(E_x-Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y+Math.cos(temp*Math.PI/180)*half_y)+center.y},
-							{x:center.x-(E_x+Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y-Math.cos(temp*Math.PI/180)*half_y)+center.y}
+							{x:center.x-(E_x+Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y-Math.cos(temp*Math.PI/180)*half_y)+center.y},
+							{x:E_x-Math.sin(temp*Math.PI/180)*half_y,y:E_y+Math.cos(temp*Math.PI/180)*half_y},
 						];
 
 
@@ -1780,10 +1780,10 @@ Qrect.prototype.rect = function(options){
  
 
 						return [
-							{x:E_x-Math.sin(temp*Math.PI/180)*half_y,y:E_y-Math.cos(temp*Math.PI/180)*half_y},
 							{x:E_x+Math.sin(temp*Math.PI/180)*half_y,y:E_y+Math.cos(temp*Math.PI/180)*half_y},
 							{x:center.x-(E_x-Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y-Math.cos(temp*Math.PI/180)*half_y)+center.y},
-							{x:center.x-(E_x+Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y+Math.cos(temp*Math.PI/180)*half_y)+center.y}
+							{x:center.x-(E_x+Math.sin(temp*Math.PI/180)*half_y)+center.x,y:center.y-(E_y+Math.cos(temp*Math.PI/180)*half_y)+center.y},
+							{x:E_x-Math.sin(temp*Math.PI/180)*half_y,y:E_y-Math.cos(temp*Math.PI/180)*half_y},
 						]
 
 
@@ -1813,7 +1813,7 @@ Qrect.prototype.rect = function(options){
 
 
 				var x,y;
-				if(dragIsBool){
+				if(dragIsBool && this.drag){
 					 x = position.x-dis[0];
 					 y = position.y-dis[1];
 
@@ -2000,7 +2000,7 @@ Qshape.prototype.shape = function(options){
 					
 				})
 				
-				if(dragIsBool){
+				if(dragIsBool && this.drag){
 					points.forEach(function(v,index){
 							points[index][0] = position.x- dis[index][0];
 							points[index][1] = position.y- dis[index][1];
@@ -2121,7 +2121,7 @@ Qarc.prototype.arc = function(options){
 
 
 				var x,y;
-				if(dragIsBool){
+				if(dragIsBool && this.drag){
 					 x = position.x-dis[0];
 					 y = position.y-dis[1];
 
@@ -2226,7 +2226,7 @@ Qpolygon.prototype.polygon = function(options){
 
 
 				var x,y;
-				if(dragIsBool){
+				if(dragIsBool && this.drag){
 					 x = position.x-dis[0];
 					 y = position.y-dis[1];
 
@@ -2643,7 +2643,7 @@ Qimg.prototype.img = function(options){
 					var dragIsBool = _this.qcanvas.isBool(this.drag);
 					var dis  = this.dis; 
 
-					if(dragIsBool){
+					if(dragIsBool && this.drag){
 						this.tStart[0] = position.x-dis[0];
 						this.tStart[1] = position.y-dis[1];
 					}else if(this.drag == 'vertical'){
@@ -2879,7 +2879,7 @@ Qspirit.prototype.spirit = function(options){
 					var dragIsBool = _this.qcanvas.isBool(this.drag);
 					var dis  = this.dis; 
 
-					if(dragIsBool){
+					if(dragIsBool && this.drag){
 						this.tStart[0] = position.x-dis[0];
 						this.tStart[1] = position.y-dis[1];
 					}else if(this.drag == 'vertical'){
@@ -3044,6 +3044,20 @@ Qspirit.prototype.paintSpirit = function(obj){
 function Qevent(qcanvas){
 	this.qeventVersion = '1.0';
 	this.qcanvas = qcanvas;
+	this.triggerEleType = {  //触发事件的元素类型
+		"rect":1,
+		"spirit":1,
+		"img":1,
+		"text":1,
+		"shape":1,
+		"arc":1,
+		"polygon":1,  
+		"layer":1,    //是容器 本身不响应事件 只判断其中的元素
+		"group":1,    //是容器 本身不响应事件 只判断其中的元素
+		"line":1,
+		"quadraticCurve":1, //二次曲线
+		"bezierCurve":1 //三次曲线
+	}
 	var _this = this;
 
 
@@ -3070,20 +3084,21 @@ function Qevent(qcanvas){
 		},
 		'mousedown_or_touchstart':function(e,position){
 			// var position = _this.getEventPosition(e);
-			var aim  = _this.findElmByEventPosition(position);
+			var aim  = _this.findElmByEventPosition(position); 
 
-			(aim!==null && aim.drag && 
-			(aim.TYPE == 'rect' || 
-				aim.TYPE == 'text' || 
-				aim.TYPE == 'arc' ||
-				aim.TYPE == 'polygon' ||
-				aim.TYPE == 'line' || 
-				aim.TYPE == 'img' || 
-				aim.TYPE == 'spirit' || 
-				aim.TYPE == 'shape' ||
-				aim.TYPE == 'quadraticCurve' ||  //二次曲线
-				aim.TYPE == 'bezierCurve' //三次曲线
-				)  && 
+			(aim!==null && aim.drag && _this.triggerEleType[aim.TYPE]
+			// (aim.TYPE == 'rect' || 
+			// 	aim.TYPE == 'text' || 
+			// 	aim.TYPE == 'arc' ||
+			// 	aim.TYPE == 'polygon' ||
+			// 	aim.TYPE == 'line' || 
+			// 	aim.TYPE == 'img' || 
+			// 	aim.TYPE == 'spirit' || 
+			// 	aim.TYPE == 'shape' ||
+			// 	aim.TYPE == 'quadraticCurve' ||  //二次曲线
+			// 	aim.TYPE == 'bezierCurve' //三次曲线
+			// 	)  
+			&& 
 			(function(){
 				aim.downFun(e,position);
 				_this.qcanvas.dragAim = aim;
@@ -3146,17 +3161,18 @@ function Qevent(qcanvas){
 
 
 				if(_this.qcanvas.dragAim !== null){
-
-					(_this.qcanvas.dragAim.TYPE=='arc' || 
-					_this.qcanvas.dragAim.TYPE=='rect' ||
-					_this.qcanvas.dragAim.TYPE=='text' ||
-					_this.qcanvas.dragAim.TYPE=='polygon' ||
-					_this.qcanvas.dragAim.TYPE=='line' ||
-					_this.qcanvas.dragAim.TYPE=='img' ||
-					_this.qcanvas.dragAim.TYPE=='spirit' ||
-					_this.qcanvas.dragAim.TYPE=='shape' ||
-					_this.qcanvas.dragAim.TYPE=='quadraticCurve'  ||
-					_this.qcanvas.dragAim.TYPE=='bezierCurve') &&
+					_this.triggerEleType[_this.qcanvas.dragAim.TYPE]
+					// (_this.qcanvas.dragAim.TYPE=='arc' || 
+					// _this.qcanvas.dragAim.TYPE=='rect' ||
+					// _this.qcanvas.dragAim.TYPE=='text' ||
+					// _this.qcanvas.dragAim.TYPE=='polygon' ||
+					// _this.qcanvas.dragAim.TYPE=='line' ||
+					// _this.qcanvas.dragAim.TYPE=='img' ||
+					// _this.qcanvas.dragAim.TYPE=='spirit' ||
+					// _this.qcanvas.dragAim.TYPE=='shape' ||
+					// _this.qcanvas.dragAim.TYPE=='quadraticCurve'  ||
+					// _this.qcanvas.dragAim.TYPE=='bezierCurve') 
+					&&
 					_this.qcanvas.dragAim.moveFun(e,position);
 
 				}
@@ -3269,40 +3285,50 @@ Qevent.prototype.eventCallback = function(e,position){
 }	
 	
 
-//根据点击的坐标 找到要触发事件的元素
+//根据点击的坐标 找到要触发事件的元素 
 Qevent.prototype.findElmByEventPosition = function(position){
-	
 		var elements = this.qcanvas.elements;
 		var aim = null;	
-		
+
 	
 		//elements数组从后往前 碰到第一个元素 点击的坐标正好在它的范围内 那么就触发它的事件
 		//越往后的元素 在画布上是越在上面的 
-		for(var i=elements.length-1;i>=0;i--){
+		var len = elements.length;
+
+		if(len == 0){
+			return this.qcanvas;
+		}
+
+		for(var i=len-1;i>=0;i--){
 
 			//跳过不显示的元素和不响应事件的元素
 			if(elements[i].display=='none' || (elements[i].pointerEvent == 'none')){
 				continue;
 			};
 			
-			if(elements[i].TYPE=='rect' 
-				 || elements[i].TYPE=='spirit' 
-				 || elements[i].TYPE=='img'
-				 || elements[i].TYPE=='text'
-				 || elements[i].TYPE=='shape'
-				 || elements[i].TYPE=='arc'
-				 || elements[i].TYPE=='polygon'
-				 || elements[i].TYPE=='layer'
-				 || elements[i].TYPE=='group'
-				 || elements[i].TYPE=='line'
-
+			if(
+				// elements[i].TYPE=='rect' 
+				//  || elements[i].TYPE=='spirit' 
+				//  || elements[i].TYPE=='img'
+				//  || elements[i].TYPE=='text'
+				//  || elements[i].TYPE=='shape'
+				//  || elements[i].TYPE=='arc'
+				//  || elements[i].TYPE=='polygon'
+				//  || elements[i].TYPE=='layer'
+				//  || elements[i].TYPE=='group'
+				//  || elements[i].TYPE=='line'
+					this.triggerEleType[elements[i].TYPE]
 				){
 
 
 				//如果是容器对象 要判断属于该容器里的元素
 				if((elements[i].TYPE == 'layer') || (elements[i].TYPE == 'group')){  
-					
-					for (var j = elements[i].elements.length-1; j >= 0; j--) {
+					var childLen = elements[i].elements.length;
+					if(childLen == 0){
+						continue;
+					}
+
+					for (var j = childLen-1; j >= 0; j--) {
 
 
 						//跳过不显示的元素和不响应事件的元素
@@ -3322,12 +3348,12 @@ Qevent.prototype.findElmByEventPosition = function(position){
 							}
 
 						}else if(this.rayCasting(position,elements[i].elements[j].polyPoints())=='in'){
-							aim = elements[i].elements[j];
+							aim = elements[i].elements[j]; 
 							break;
 						}
 					}
+ 
 				}
-
 
 				if((aim === null) && (elements[i].TYPE !== 'layer') && (elements[i].TYPE !== 'group')){
 					if(this.rayCasting(position,elements[i].polyPoints())=='in'){
@@ -3468,7 +3494,7 @@ function Qlayer(p){
 
 		_this.canvasEle.width = _this.pcanvas.stage.width*_this.dpr;
 		_this.canvasEle.height = _this.pcanvas.stage.height*_this.dpr; 
-		_this.canvasEle.id = parseInt(Math.random()*100000000);
+		_this.canvasEle.id = (new Date()).getTime()+''+parseInt(Math.random()*100000000);
 		_this.qcanvas.context = _this.canvasEle.getContext('2d');
 		_this.qcanvas.context.scale(_this.dpr,_this.dpr);
 
@@ -3481,7 +3507,7 @@ function Qlayer(p){
 			pcanvas:this.pcanvas,
 			// elements:this.qcanvas.elements,
 			elements:[],
-			id: parseInt(Math.random()*100000000),
+			id: (new Date()).getTime()+''+parseInt(Math.random()*100000000),
 			display:'block', 
 			// qline:this.pcanvas.qline,
 			// TypeGroup: {
@@ -3497,22 +3523,23 @@ function Qlayer(p){
 		 //  		// 'group':this.qcanvas.qgroup.paintGroup
 		 //  	},
 			push:function(ele){
-
-				for (var i = 0; i < arguments.length; i++) {
+				var t = Array.prototype.slice.apply(arguments);
+				var l = t.length;
+				for (var i = 0; i < l; i++) {
 
 					//不支持layer对象上再放入layer或group
-					if((arguments[i].TYPE == 'layer') || (arguments[i].TYPE == 'group')){   
+					if((t[i].TYPE == 'layer') || (t[i].TYPE == 'group')){   
 						continue;
 					}
  
-					if(this.pcanvas.isObj(arguments[i])){
-						this.pcanvas.removeEle.call(this.pcanvas,arguments[i]);
-						this.elements.push(arguments[i]);
-						// this.qcanvas.elements.push(arguments[i]);
+					if(this.pcanvas.isObj(t[i])){
+						this.pcanvas.removeEle.call(this.pcanvas,t[i]);
+						this.elements.push(t[i]);
+						// this.qcanvas.elements.push(t[i]);
 						
-						if(arguments[i].TYPE =='line' && typeof arguments[i].withTextId !='undefined'){  
+						if((t[i].TYPE =='line' || t[i].TYPE=='bezierCurve' || t[i].TYPE=='quadraticCurve') && typeof t[i].withTextId !='undefined'){  
 							//如果线段上带有文本 也需要把文本加入到该layer里 
-							var withTextObj = this.pcanvas.getEleById.call(this.pcanvas,arguments[i].withTextId);
+							var withTextObj = this.pcanvas.getEleById.call(this.pcanvas,t[i].withTextId);
 							this.pcanvas.removeEle.call(this.pcanvas,withTextObj);
 							this.elements.push(withTextObj);
 
@@ -3577,8 +3604,8 @@ function Qlayer(p){
 	this.paint = function(layer){
 
 		if(layer.display == 'none'){return;};
-
-		for(var i = 0; i<layer.elements.length; i++){
+		var l = layer.elements.length;
+		for(var i = 0; i<l; i++){
 			var o = layer.elements[i];
 
 			if(o.display=='none'){
@@ -3593,12 +3620,14 @@ function Qlayer(p){
 		// this.pcanvas.context.drawImage(t,0,0);
 
 	}
-	this.clear = function(){
+	this.clear = function(layer){
+		if(layer.display == 'none'){return;};
+
 		this.qcanvas.context.clearRect(0,0,this.canvasEle.width,this.canvasEle.height);
 	}
 
 	this.start = function(o){
-		this.clear();
+		this.clear(o);
 		this.paint(o);			
 		
 		var currentLoop = (new Date()).getMilliseconds();
@@ -3659,7 +3688,8 @@ Qgroup.prototype.group = function(options){
 Qgroup.prototype.paintGroup = function(obj){
 
 	//把属于该容器的元素绘在layerCanvas
-	for(var i = 0; i<obj.elements.length; i++){
+	var l = obj.elements.length;
+	for(var i = 0; i<l; i++){
 		var o = obj.elements[i];
 
 		if(o.display=='none'){
@@ -3671,17 +3701,18 @@ Qgroup.prototype.paintGroup = function(obj){
 	} 
 }
 Qgroup.prototype.push = function(ele){
-
-	for (var i = 0; i < arguments.length; i++) {
+	var t = Array.prototype.slice.apply(arguments);
+	var l = t.length;
+	for (var i = 0; i < l; i++) {
 
 		//不支持group对象上再放入group
-		if(arguments[i].TYPE == 'group'){   
+		if(t[i].TYPE == 'group' || t[i].TYPE == 'layer'){   
 			continue;
 		}
 
-		if(this.qcanvas.isObj(arguments[i])){
-			this.qcanvas.removeEle(arguments[i]);
-			this.elements.push(arguments[i]);
+		if(this.qcanvas.isObj(t[i])){
+			this.qcanvas.removeEle(t[i]);
+			this.elements.push(t[i]);
 		} 
 	}
 
@@ -4147,7 +4178,7 @@ function Qcanvas(options){
 	
 	this.qcanvasVersion = '1.0';
 	this.TYPE = 'canvas';
-	this.id = parseInt(Math.random()*100000000);
+	this.id = (new Date()).getTime()+''+parseInt(Math.random()*100000000);
 	this.context = c_obj.getContext('2d');
 	// 需要将绘制比例放大
     this.context.scale(this.dpr,this.dpr);
@@ -4230,11 +4261,11 @@ function Qcanvas(options){
   	this.placeHolderImg.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDlEMzc4NzlFMDJDMTFFQUE1QkREQzVDRjA2NDgzNEQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDlEMzc4N0FFMDJDMTFFQUE1QkREQzVDRjA2NDgzNEQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0OUQzNzg3N0UwMkMxMUVBQTVCRERDNUNGMDY0ODM0RCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0OUQzNzg3OEUwMkMxMUVBQTVCRERDNUNGMDY0ODM0RCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ph/0HDsAAAAQSURBVHjaYvj//z8DQIABAAj8Av7bok0WAAAAAElFTkSuQmCC'
 
 	//启动
-	// this.start();
+	this.start();
 	// this.requestNextAnimationFrame1.call(this,this.start);
 	// 
 	// 
-window.requestNextAnimationFrame(this.start.bind(this))
+// window.requestNextAnimationFrame(this.start.bind(this))
 
 
 // this.animationFrame(this.start.bind(this));
@@ -4244,7 +4275,7 @@ window.requestNextAnimationFrame(this.start.bind(this))
 
 Qcanvas.prototype.createShadowCanvas = function() {
 	this.shadowCanvas = document.createElement('canvas');
-	this.shadowCanvas.id = parseInt(Math.random()*100000000);
+	this.shadowCanvas.id =(new Date()).getTime()+''+parseInt(Math.random()*100000000);
 	// this.shadowCanvas = document.getElementById('qcanvas1');
 
 
@@ -4512,8 +4543,8 @@ window.requestNextAnimationFrame(this.start.bind(this))
 
 //根据elements数组 画所有元素
 Qcanvas.prototype.paint = function(	){
-	
-	for(var i = 0; i<this.elements.length; i++){
+	var l = this.elements.length;
+	for(var i = 0; i<l; i++){
 		var o = this.elements[i];
 
 		if(o.display=='none'){
@@ -4618,7 +4649,7 @@ Qcanvas.prototype.pushElements = function(element){
 	
 	if(typeof element.id == 'undefined'){
 		//自动生成一个唯一id
-		element.id = parseInt(Math.random()*100000000);
+		element.id = (new Date()).getTime()+''+parseInt(Math.random()*100000000);
 		element.shadowFillColor = 'rgba('+this.RandomNumBoth(0,255)+','+this.RandomNumBoth(0,255)+','+this.RandomNumBoth(0,255)+',1)';
 		this.elements.push(element);
 	}
@@ -4626,8 +4657,8 @@ Qcanvas.prototype.pushElements = function(element){
 }
 
 Qcanvas.prototype.getEleById = function(id){
-	
-	for(var i=0;i<this.elements.length;i++){
+	var l = this.elements.length;
+	for(var i=0;i<l;i++){
 		if(this.elements[i].id == id){
 				return this.elements[i];
 				break;
@@ -4639,13 +4670,13 @@ Qcanvas.prototype.getEleById = function(id){
 //从elements数组中删除 
 //该方法使用时要注意 如果其它元素的某一属性与该元素有关联 为了不让它出现在画布中最好用setDisplay()方法
 Qcanvas.prototype.removeEle = function(obj){
-	 
-	for(var i=0;i<this.elements.length;i++){
-		if(this.elements[i].id == obj.id){ 
-				this.elements.splice(i,1);
-				break;
-		}	
-	}
+	var l = this.elements.length;
+		for(var i=0;i<l;i++){
+			if(this.elements[i].id == obj.id){ 
+					this.elements.splice(i,1);
+					break;
+			}	
+		}
  
 	
 }
@@ -4655,8 +4686,8 @@ Qcanvas.prototype.removeEle = function(obj){
 
 
 Qcanvas.prototype.getIndexById = function(id){
-	 
-	for(var i=0;i<this.elements.length;i++){
+	var l = this.elements.length;
+	for(var i=0;i<l;i++){
 		if(this.elements[i].id == id){
 				return i; 
 				break;
@@ -5010,9 +5041,3 @@ typeof window.requestNextAnimationFrame =='undefined'
 
 
 })()
-
-
-
-
-				
-
