@@ -75,7 +75,7 @@ callback：资源加载完成回调函数
 通过名称得到图片资源对象
 接收参数类型 String
 
-> #### 18、loadImgSource
+> ##### 18、loadImgSource
 > 加载图片资源方法
 > 接收参数（url） 
 > url:资源地址（可以为字符串或数据）['http://www.abc.com/a.jpg']或'http://www.abc.com/a.jpg'
