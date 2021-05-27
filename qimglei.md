@@ -25,6 +25,30 @@ http://sandbox.runjs.cn/uploads/rs/475/t0qpfflr/hand.png
 });
 ```
 
+```
+
+qcanvas.loadImgSource("img/img.png").then(function(img){
+	var b = img[0];
+	qcanvas.qimg.img({
+		img:b,
+		sStart:[0,0],
+		sWidth:b.width,
+		sHeight:b.height,
+		size:"cover",
+		tStart:[150,0],
+		tWidth:50,
+		tHeight:120,
+		degree:30,
+		mousemove:function(position){
+			console.log(position);
+		}
+		
+	});
+})
+```
+
+
+
 或
 
 ```
