@@ -1,9 +1,9 @@
 # Summary
 
 * [Qcanvas说明](README.md)
-* [Qcanvas类](chapter1.md)
-  * [属性](chapter1/shu-xing.md)
-  * [方法](chapter1/fang-fa.md)
+* [Qcanvas类](qcanvas.md)
+  * [属性](qcanvas/shu-xing.md)
+  * [方法](qcanvas/fang-fa.md)
 * [Qtext类](qtextlei.md)
   * [属性](qtextlei/shu-xing.md)
   * [方法](qtextlei/fang-fa.md)
