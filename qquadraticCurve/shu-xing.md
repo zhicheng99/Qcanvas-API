@@ -11,7 +11,7 @@
 | 9    | width                  | Number         | 否                   | 线的粗细                                                     |
 | 10   | withText               | String         | 否                   | 线带着的文本                                                 |
 | 11   | withTextAlign          | String         | 否                   | 线带着的文本的横向位置 \[left center\(默认\) right\]         |
-| 12   | drag                   | String/Boolean | 否                   | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'Horizontal':只可横向拖动） |
+| 12   | drag                   | String/Boolean | 否                   | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'horizontal':只可横向拖动） |
 | 13   | pointerEvent           | String         | 否                   | 是否响应事件（默认'auto':响应，'none':不响应）               |
 | 14   | mousedown              | Fun            | 否                   | 事件                                                         |
 | 15   | mousemove              | Fun            | 否                   | 事件                                                         |

@@ -12,7 +12,7 @@
 | 10 | tHeight | Number | 是 | 以画布目标位置开始的高度 |
 | 11 | isLoop | Boole | 否 | 是否循环播放 |
 | 12 | during | Number | 是 | 一个序列播放完成需要的时间 单位\(秒\) |
-| 13 | drag | String/Boolean | 否 | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'Horizontal':可能横向拖动） |
+| 13 | drag | String/Boolean | 否 | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'horizontal':可能横向拖动） |
 | 14 | pointerEvent | String | 否 | 是否响应事件（默认'auto':响应，'none':不响应） |
 | 15 | mousedown | Fun | 否 | 事件 |
 | 16 | mousemove | Fun | 否 | 事件 |

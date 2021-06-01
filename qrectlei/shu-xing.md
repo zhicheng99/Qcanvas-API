@@ -9,7 +9,7 @@
 | 7 | height | Number Or Fun | 否 | 矩形高 |
 | 8 | borderColor | String | 否 | 矩形边线颜色 |
 | 9 | fillColor | String | 否 | 矩形填充颜色 |
-| 10 | drag | String/Boolean | 否 | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'Horizontal':可能横向拖动） |
+| 10 | drag | String/Boolean | 否 | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'horizontal':可能横向拖动） |
 | 11 | pointerEvent | String | 否 | 是否响应事件（默认'auto':响应，'none':不响应） |
 | 12 | mousedown | Fun | 否 | 事件 |
 | 13 | mousemove | Fun | 否 | 事件 |

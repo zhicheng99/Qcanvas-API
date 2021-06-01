@@ -10,7 +10,7 @@
 | 8 | tStart | Array | 是 | 画布目标位置起始坐标 |
 | 9 | tWidth | Number | 是 | 画布目标位置宽度 |
 | 10 | tHeight | Number | 是 | 画布目标位置高度 |
-| 11 | drag | String/Boolean | 否 | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'Horizontal':可能横向拖动） |
+| 11 | drag | String/Boolean | 否 | 是否可拖动（true:可拖动【默认】，false:不可拖动，'vertical':只可竖向拖动，'horizontal':可能横向拖动） |
 | 12 | pointerEvent | String | 否 | 是否响应事件（默认'auto':响应，'none':不响应） |
 | 13 | mousedown | Fun | 否 | 事件 |
 | 14 | mousemove | Fun | 否 | 事件 |
