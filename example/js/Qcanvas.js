@@ -2671,11 +2671,9 @@ Qimg.prototype.img = function(options){
 	if(tmp !=''){
 		OPTIONS.sWidth = 1;
 		OPTIONS.sHeight = 1;
-
-
-		this.qcanvas.load({img:tmp},function(){
-			var img = _this.qcanvas.getSourceByName("img");
-
+ 
+		this.qcanvas.loadImgSource(tmp).then(function(img){
+			var img = img[0];
 			OPTIONS.sWidth = img.width;
 			OPTIONS.sHeight = img.height;
 			OPTIONS.img = img;
@@ -2705,9 +2703,44 @@ Qimg.prototype.img = function(options){
 			
 			}
 
-
-
+		},function(){
+			console.log('加载资源失败')
 		})
+		// this.qcanvas.load({img:tmp},function(){
+		// 	var img = _this.qcanvas.getSourceByName("img");
+
+		// 	OPTIONS.sWidth = img.width;
+		// 	OPTIONS.sHeight = img.height;
+		// 	OPTIONS.img = img;
+
+
+		// 	if(OPTIONS.size!=''){
+				
+		// 		//重新计算sStart sWidth sHeight
+		// 		//全覆盖目标区域 图像的某些部分也许无法显示在目标区域中
+		// 		if(OPTIONS.size =='cover'){ 
+		// 				delete OPTIONS.sStart;
+		// 			  	delete OPTIONS.sWidth;
+		// 				delete OPTIONS.sHeight;
+					  
+						
+		// 				var sourceObj = _this.sourcePosition(OPTIONS.img,OPTIONS.tWidth,OPTIONS.tHeight);
+						
+						
+		// 				OPTIONS.sStart = sourceObj.sStart;
+		// 				OPTIONS.sWidth = sourceObj.sWidth;
+		// 				OPTIONS.sHeight = sourceObj.sHeight;
+					
+					
+					
+		// 		}
+			
+			
+		// 	}
+
+
+
+		// })
     } 
 	
 	
@@ -4742,8 +4775,75 @@ Qcanvas.prototype.raiseToTop = function(el){
 	this.elements.push(el);
 }
 
+//promise类
+Qcanvas.prototype.loadPromise = function(fn) {
+    var value = null, succallbacks = [], failcallbacks = [];
+    this.then = function (fulfilled, rejected) {
+        succallbacks.push(fulfilled);
+        failcallbacks.push(rejected);
+    }
+
+    function resolve(value) {
+        setTimeout(function(){ 
+            succallbacks.forEach((callback) => {
+                callback(value);
+            })
+        },0)
+    }
+
+    function reject(value) {
+        setTimeout(function(){
+            failcallbacks.forEach((callback) => {
+                callback(value);
+            })
+        },0)
+       
+    }
+
+    fn(resolve, reject);
+}
+Qcanvas.prototype.loadImgSource = function(sourceObj){
+	if(this.isArr(sourceObj)){
+		var urlArr = sourceObj;
+	}else{
+		if(arguments.length>0){
+			var urlArr  = [].slice.call(arguments)
+		}
+	}
+	
+	var _this = this; 
+	return new this.loadPromise(function(resolve,reject){
+		//先实现加载图片资源
+		var imgArr = [];
+		var num = 0;
+
+			for (var i = 0; i < urlArr.length; i++) { 
+				img = new Image();
+				imgArr.push(img);
+				img.onload = function(){
+					num++;
+					if(num==imgArr.length){
+						resolve(imgArr);
+					}
+				}; 
+				img.onerror = function(){
+					// console.log('err');
+					num++;
+					if(num==imgArr.length){
+						resolve(imgArr);
+					}
+					console.log('索引为'+this.sort+'的资源加载失败');
+				}
+				img.sort = i;
+				img.src = urlArr[i];
+			}
+		
+		
+
+	}) 
 
 
+}
 //加载图片资源				
 Qcanvas.prototype.load = function(sourceObj,callback){
 	
@@ -4767,10 +4867,8 @@ Qcanvas.prototype.load = function(sourceObj,callback){
 			num++;
 			
 			if(num==imgArr.length){
-					callback(_this.source);
+				callback(_this.source);
 			}
-			
-			
 		};
 		img.alias = i;
 		img.src=sourceObj[i];
