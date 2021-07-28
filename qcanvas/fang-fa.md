@@ -10,7 +10,7 @@
 8|load|加载图片资源方法(建议使用新的loadImgSource方法)
 9|getSourceByName|通过名称得到图片资源对象
 10|getEleById|通过Id得到元素对象
-11|removeEle|删除元素对象
+11|removeEle|删除元素对象（参数是元素对象）
 12|getIndexById|通过Id得到元素在elements数组中的索引
 13|lower|把元素降低一个层级 (参数为元素对象)
 14|lowerToBottom|把元素层级置底(参数为元素对象)
@@ -18,6 +18,7 @@
 16|raiseToTop|把元素层级置顶(参数为元素对象)
 17|destroy|清除画布所有元素
 18|loadImgSource|加载图片资源方法
+19|removeEleById|删除元素对象（参数是元素id）
 
 
 
