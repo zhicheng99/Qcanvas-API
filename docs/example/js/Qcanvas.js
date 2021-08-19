@@ -210,25 +210,21 @@ QquadraticCurve.prototype.paintQuadraticCurve  = function(obj){
 	this.qcanvas.context.beginPath();
 	this.qcanvas.context.lineWidth = obj.width;
 
+	var drawLine = function(){
+		this.qcanvas.context.moveTo(start[0],start[1]); 
+		this.qcanvas.context.quadraticCurveTo(handler[0],handler[1] , end[0],end[1]);
+		this.qcanvas.context.stroke();
+	}
 
 	switch(obj.like)
 	{
 		case '-': 
-			
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.quadraticCurveTo(handler[0],handler[1] , end[0],end[1]);
-			this.qcanvas.context.stroke();
-			
-			
-			
+			drawLine.call(this)
 			break;
 		case '--': 
 
 			this.qcanvas.context.setLineDash([3]);
-
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.quadraticCurveTo(handler[0],handler[1] , end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -236,10 +232,7 @@ QquadraticCurve.prototype.paintQuadraticCurve  = function(obj){
  
 			break;
 		case '->': 
-			
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.quadraticCurveTo(handler[0],handler[1] , end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
 			 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -247,12 +240,17 @@ QquadraticCurve.prototype.paintQuadraticCurve  = function(obj){
 			obj.drawArrow(handler[0], handler[1], end[0], end[1],30,10,1,obj.color)
 			
 			break;
+		case '<-': 
+			drawLine.call(this)
+			 
+			//可能路径是虚线形式的 设置成实线
+			this.qcanvas.context.setLineDash([]);
+
+			obj.drawArrow(handler[0], handler[1], start[0], start[1],30,10,1,obj.color)
+			
+			break;	
 		case '<->': 
-			
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.quadraticCurveTo(handler[0],handler[1] , end[0],end[1]);
-			this.qcanvas.context.stroke();
-			
+			drawLine.call(this)
 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -265,9 +263,7 @@ QquadraticCurve.prototype.paintQuadraticCurve  = function(obj){
 		case '-->': 
 
 			this.qcanvas.context.setLineDash([3]);
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.quadraticCurveTo(handler[0],handler[1] , end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
 
 
 			//可能路径是虚线形式的 设置成实线
@@ -276,12 +272,22 @@ QquadraticCurve.prototype.paintQuadraticCurve  = function(obj){
 			obj.drawArrow(handler[0], handler[1], end[0], end[1],30,10,1,obj.color);
 
 			break;
+		case '<--': 
+
+			this.qcanvas.context.setLineDash([3]);
+			drawLine.call(this)
+
+
+			//可能路径是虚线形式的 设置成实线
+			this.qcanvas.context.setLineDash([]);
+			
+			obj.drawArrow(handler[0], handler[1], start[0], start[1],30,10,1,obj.color);
+
+			break;
 		case '<-->': 
 
 			this.qcanvas.context.setLineDash([3]);
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.quadraticCurveTo(handler[0],handler[1] , end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -592,23 +598,22 @@ QbezierCurve.prototype.paintBezierCurve = function(obj) {
 	this.qcanvas.context.strokeStyle = obj.color;
 	this.qcanvas.context.beginPath();
 	this.qcanvas.context.lineWidth = obj.width;
+	var drawLine = function(){
+		this.qcanvas.context.moveTo(start[0],start[1]); 
+		this.qcanvas.context.bezierCurveTo(handler1[0],handler1[1],handler2[0],handler2[1], end[0],end[1]);
+		this.qcanvas.context.stroke();
+	}
 
 	switch(obj.like)
 	{
 		case '-': 
-			
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.bezierCurveTo(handler1[0],handler1[1],handler2[0],handler2[1], end[0],end[1]);
-			this.qcanvas.context.stroke();
-			
+			drawLine.call(this)
 			break;
 		case '--': 
 
 			this.qcanvas.context.setLineDash([3]);
+			drawLine.call(this)
 
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.bezierCurveTo(handler1[0],handler1[1],handler2[0],handler2[1], end[0],end[1]);
-			this.qcanvas.context.stroke();
 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -616,10 +621,8 @@ QbezierCurve.prototype.paintBezierCurve = function(obj) {
  
 			break;	
 		case '->': 
-			
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.bezierCurveTo(handler1[0],handler1[1],handler2[0],handler2[1], end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
+
 			 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -627,11 +630,17 @@ QbezierCurve.prototype.paintBezierCurve = function(obj) {
 			obj.drawArrow(handler2[0], handler2[1], end[0], end[1],30,10,1,obj.color)
 			
 			break;
-		case '<->': 
+		case '<-': 
+			drawLine.call(this)
+			 
+			//可能路径是虚线形式的 设置成实线
+			this.qcanvas.context.setLineDash([]);
+
+			obj.drawArrow(handler1[0], handler1[1], start[0], start[1],30,10,1,obj.color)
 			
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.bezierCurveTo(handler1[0],handler1[1],handler2[0],handler2[1], end[0],end[1]);
-			this.qcanvas.context.stroke();
+			break;
+		case '<->': 
+			drawLine.call(this)
 			
 
 			//可能路径是虚线形式的 设置成实线
@@ -645,9 +654,7 @@ QbezierCurve.prototype.paintBezierCurve = function(obj) {
 		case '-->': 
 
 			this.qcanvas.context.setLineDash([3]);
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.bezierCurveTo(handler1[0],handler1[1],handler2[0],handler2[1], end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
 
 
 			//可能路径是虚线形式的 设置成实线
@@ -656,12 +663,22 @@ QbezierCurve.prototype.paintBezierCurve = function(obj) {
 			obj.drawArrow(handler2[0], handler2[1], end[0], end[1],30,10,1,obj.color);
 
 			break;
+		case '<--': 
+
+			this.qcanvas.context.setLineDash([3]);
+			drawLine.call(this)
+
+
+			//可能路径是虚线形式的 设置成实线
+			this.qcanvas.context.setLineDash([]);
+			
+			obj.drawArrow(handler1[0], handler1[1], start[0], start[1],30,10,1,obj.color);
+
+			break;
 		case '<-->': 
 
 			this.qcanvas.context.setLineDash([3]);
-			this.qcanvas.context.moveTo(start[0],start[1]); 
-			this.qcanvas.context.bezierCurveTo(handler1[0],handler1[1],handler2[0],handler2[1], end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -1071,37 +1088,28 @@ Qline.prototype.paintLine  = function(obj){
 	this.qcanvas.context.strokeStyle = obj.color;
 	this.qcanvas.context.beginPath();
 	this.qcanvas.context.lineWidth=obj.width;
+	var drawLine = function(){
+		this.qcanvas.context.moveTo(start[0],start[1]);
+		this.qcanvas.context.lineTo(end[0],end[1]);
+		this.qcanvas.context.stroke();
+	}
 
 	switch(obj.like)
 	{
 		case '-':
-			//if(obj.like == '--'){
-			//	this.qcanvas.context.setLineDash([2, 4]);
-			//}
-			
-			this.qcanvas.context.moveTo(start[0],start[1]);
-			this.qcanvas.context.lineTo(end[0],end[1]);
-			this.qcanvas.context.stroke();
-			
-			
-			
+			drawLine.call(this)
 			break;
 		case '--': 
 
 			this.qcanvas.context.setLineDash([3]);
-			this.qcanvas.context.moveTo(start[0],start[1]);
-			this.qcanvas.context.lineTo(end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
  
 			break;
 		case '->': 
-			
-			this.qcanvas.context.moveTo(start[0],start[1]);
-			this.qcanvas.context.lineTo(end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
 			 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -1109,11 +1117,17 @@ Qline.prototype.paintLine  = function(obj){
 			obj.drawArrow(start[0], start[1], end[0], end[1],30,10,1,obj.color)
 			
 			break;
-		case '<->': 
+		case '<-': 
+			drawLine.call(this)
+			 
+			//可能路径是虚线形式的 设置成实线
+			this.qcanvas.context.setLineDash([]);
+
+			obj.drawArrow(end[0], end[1],start[0], start[1],30,10,1,obj.color)
 			
-			this.qcanvas.context.moveTo(start[0],start[1]);
-			this.qcanvas.context.lineTo(end[0],end[1]);
-			this.qcanvas.context.stroke();
+			break;
+		case '<->': 
+			drawLine.call(this)
 			 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -1126,21 +1140,27 @@ Qline.prototype.paintLine  = function(obj){
 		case '-->': 
 
 			this.qcanvas.context.setLineDash([3]);
-			this.qcanvas.context.moveTo(start[0],start[1]);
-			this.qcanvas.context.lineTo(end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
  			
  			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
 
 			obj.drawArrow(start[0], start[1], end[0], end[1],30,10,1,obj.color);
 			break;
+		case '<--': 
+
+			this.qcanvas.context.setLineDash([3]);
+			drawLine.call(this)
+ 			
+ 			//可能路径是虚线形式的 设置成实线
+			this.qcanvas.context.setLineDash([]);
+
+			obj.drawArrow( end[0], end[1],start[0], start[1],30,10,1,obj.color);
+			break;	
 		case '<-->': 
 
 			this.qcanvas.context.setLineDash([3]);
-			this.qcanvas.context.moveTo(start[0],start[1]);
-			this.qcanvas.context.lineTo(end[0],end[1]);
-			this.qcanvas.context.stroke();
+			drawLine.call(this)
 
 			//可能路径是虚线形式的 设置成实线
 			this.qcanvas.context.setLineDash([]);
@@ -1419,6 +1439,8 @@ Qtext.prototype.text = function(options){
 			fontFamily:'Microsoft YaHei',
 			start:[0,0],
 			drag:true,
+			  dragRange:[],  //限制拖动的区域 必须为两个坐标点[[左上角x,左上角y]，[右下角x,右下角y]]
+
 			pointerEvent:'auto',
 			range:{width:0,height:0},
 			degree:0,
@@ -1577,31 +1599,31 @@ Qtext.prototype.text = function(options){
 				var dragIsBool = _this.qcanvas.isBool(this.drag);
 				var dis  = this.dis;
 				var start = _this.qcanvas.isFun(this.start)?this.start():this.start;
-				// var range = _this.qcanvas.isFun(this.dragRange)?this.dragRange():this.dragRange;
+				var range = _this.qcanvas.isFun(this.dragRange)?this.dragRange():this.dragRange;
 
 				var x,y;
 				if(dragIsBool && this.drag){
 					 x = position.x-dis[0];
 					 y = position.y-dis[1];
 
-					//  if(range.length == 2){  
-					// 	x = x>=range[1][0]?range[1][0]:x;
-					// 	x = x<=range[0][0]?range[0][0]:x;
+					 if(range.length == 2){  
+						x = x>=range[1][0]?range[1][0]:x;
+						x = x<=range[0][0]?range[0][0]:x;
 
-					// 	y = y>=range[1][1]?range[1][1]:y;
-					// 	y = y<=range[0][1]?range[0][1]:y;
-					// }
+						y = y>=range[1][1]?range[1][1]:y;
+						y = y<=range[0][1]?range[0][1]:y;
+					}
 
 				}else if(this.drag == 'vertical'){
 					 x = this.start[0];
 					 y = position.y-dis[1];
 
 
-					//  if(range.length == 2){   
+					 if(range.length == 2){   
 
-					// 	y = y>=range[1][1]?range[1][1]:y;
-					// 	y = y<=range[0][1]?range[0][1]:y;
-					// }
+						y = y>=range[1][1]?range[1][1]:y;
+						y = y<=range[0][1]?range[0][1]:y;
+					}
 
 
 				}else if(this.drag == 'horizontal'){
@@ -1609,19 +1631,18 @@ Qtext.prototype.text = function(options){
 					 y = this.start[1]; 
 
 
-					//  if(range.length == 2){  
-					// 	x = x>=range[1][0]?range[1][0]:x;
-					// 	x = x<=range[0][0]?range[0][0]:x; 
-					// }
+					 if(range.length == 2){  
+						x = x>=range[1][0]?range[1][0]:x;
+						x = x<=range[0][0]?range[0][0]:x; 
+					}
 				} 
 			 	//如果创建时位置数据依赖于别的元素 那么一旦拖动该元素 数据的依赖关系就会断开 切记
 				this.start = [x,y];
 			},
 			formatText:function(obj) {  //处理多行文本
 				var text = _this.qcanvas.isFun(obj.text)?obj.text():obj.text;
-
 				var t;
-				if(text.indexOf('\n') > -1){
+				if((text+'').indexOf('\n') > -1){
 					t =  text.split('\n');
 				}else{
 
@@ -1809,7 +1830,7 @@ Qrect.prototype.rect = function(options){
 				var dragIsBool = _this.qcanvas.isBool(this.drag);
 				var dis  = this.dis;
 				var start = _this.qcanvas.isFun(this.start)?this.start():this.start;
-				// var range = _this.qcanvas.isFun(this.dragRange)?this.dragRange():this.dragRange;
+				var range = _this.qcanvas.isFun(this.dragRange)?this.dragRange():this.dragRange;
 
 
 				var x,y;
@@ -1817,24 +1838,24 @@ Qrect.prototype.rect = function(options){
 					 x = position.x-dis[0];
 					 y = position.y-dis[1];
 
-					//  if(range.length == 2){  
-					// 	x = x>=range[1][0]?range[1][0]:x;
-					// 	x = x<=range[0][0]?range[0][0]:x;
+					 if(range.length == 2){  
+						x = x>=range[1][0]?range[1][0]:x;
+						x = x<=range[0][0]?range[0][0]:x;
 
-					// 	y = y>=range[1][1]?range[1][1]:y;
-					// 	y = y<=range[0][1]?range[0][1]:y;
-					// }
+						y = y>=range[1][1]?range[1][1]:y;
+						y = y<=range[0][1]?range[0][1]:y;
+					}
 
 				}else if(this.drag == 'vertical'){
 					 x = this.start[0];
 					 y = position.y-dis[1];
 
 
-					//  if(range.length == 2){   
+					 if(range.length == 2){   
 
-					// 	y = y>=range[1][1]?range[1][1]:y;
-					// 	y = y<=range[0][1]?range[0][1]:y;
-					// }
+						y = y>=range[1][1]?range[1][1]:y;
+						y = y<=range[0][1]?range[0][1]:y;
+					}
 
 
 				}else if(this.drag == 'horizontal'){
@@ -1842,10 +1863,10 @@ Qrect.prototype.rect = function(options){
 					 y = this.start[1]; 
 
 
-					//  if(range.length == 2){  
-					// 	x = x>=range[1][0]?range[1][0]:x;
-					// 	x = x<=range[0][0]?range[0][0]:x; 
-					// }
+					 if(range.length == 2){  
+						x = x>=range[1][0]?range[1][0]:x;
+						x = x<=range[0][0]?range[0][0]:x; 
+					}
 				} 
 			 	//如果创建时位置数据依赖于别的元素 那么一旦拖动该元素 数据的依赖关系就会断开 切记
 				this.start = [x,y];
@@ -3547,6 +3568,8 @@ function Qlayer(p){
 
 			getEleById: this.pcanvas.getEleById,
 			removeEle: this.pcanvas.removeEle,
+			removeEleById: this.pcanvas.removeEleById,
+
 
 			getIndexById: this.pcanvas.getIndexById,
 			lower: this.pcanvas.lower,
@@ -3648,6 +3671,8 @@ Qgroup.prototype.group = function(options){
 			qcanvas:this.qcanvas,
 			getEleById:this.qcanvas.getEleById,
 			removeEle:this.qcanvas.removeEle,
+			removeEleById:this.qcanvas.removeEleById,
+
 			getIndexById:this.qcanvas.getIndexById,
 			lower:this.qcanvas.lower,
 			lowerToBottom:this.qcanvas.lowerToBottom,
@@ -4664,7 +4689,19 @@ Qcanvas.prototype.removeEle = function(obj){
  
 	
 }
-
+//从elements数组中删除 
+//该方法使用时要注意 如果其它元素的某一属性与该元素有关联 为了不让它出现在画布中最好用setDisplay()方法
+Qcanvas.prototype.removeEleById = function(id){
+	var l = this.elements.length;
+		for(var i=0;i<l;i++){
+			if(this.elements[i].id == id){ 
+					this.elements.splice(i,1);
+					break;
+			}	
+		}
+ 
+	
+}
 
 
 
