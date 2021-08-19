@@ -3204,9 +3204,13 @@ function Qevent(qcanvas){
 
 
 				if(_this.qcanvas.dragAim !== null){
+					// _this.triggerEleType[_this.qcanvas.dragAim.TYPE] 
+					// &&
+					// _this.qcanvas.dragAim.moveFun(e,position);
+
 					_this.triggerEleType[_this.qcanvas.dragAim.TYPE] 
 					&&
-					_this.qcanvas.dragAim.moveFun(e,position);
+					_this.qcanvas.dragAim.moveFun.call(_this.qcanvas.dragAim,e,position);
 
 				}
 
