@@ -3099,6 +3099,7 @@ function Qevent(qcanvas){
 	this.qeventVersion = '1.0';
 	this.qcanvas = qcanvas;
 	this.triggerEleType = {  //触发事件的元素类型
+		"canvas":1,
 		"rect":1,
 		"spirit":1,
 		"img":1,
