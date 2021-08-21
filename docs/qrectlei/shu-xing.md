@@ -26,6 +26,7 @@
 | 24 | dashed | Boolean | 否 | 边线是否为虚线 |
 | 25 | mouseenter | Fun | 否 | 事件 |
 | 27 | dblclick | Fun | 否 | 事件 |
+| 28 | dragRange | Array | 否 | 限制拖动的区域(限制start的值) 必须为两个坐标点[[左上角x,左上角y]，[右下角x,右下角y]] |
 
 
 ---
