@@ -1,6 +1,31 @@
-# Qcanvas API v1.0
+# Qcanvas API v1.x
 
 Qcanvas API说明文档
+
+2021-09-06 Qcanvas 2.0初版已经开发完毕, 功能保持和1.x的同步，死了不少脑细胞，因为是基于1.x的，所以花费时间少一点，大约花了40多个小时 （包括示例测试），
+
+注：v1.x以后不再增加新功能   
+
+两个版本主要区别如下
+
+| 序号 | 区别点                       | v1.x                                                         | v2.0                                                         |
+| ---- | ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1    | 画布初始化                   | new Qcanvas(["qcanvas",300,200]);			或			<br />new Qcanvas({				<br />id:'qcanvas',<br/>				width:300,<br/>				height:200<br/>			}) | new Qcanvas({				id:'qcanvas',<br/>				width:300,<br/>				height:200<br/>			}) |
+| 2    | 线段实始化                   | qcanvas.qline.line(...options)                               | qcanvas.line(...options)                                     |
+| 3    | 矩形初始化                   | qcanvas.qrect.rect(...options)                               | qcanvas.rect(...options)                                     |
+| 4    | 圆初化                       | qcanvas.qarc.arc(..options)                                  | qcanvas.arc(..options)                                       |
+| 5    | 图片初始化                   | qcanvas.qimg.img(..options)                                  | qcanvas.img(..options)                                       |
+| 6    | 文字初化                     | qcanvas.qtext.text(...options)                               | qcanvas.text(...options)                                     |
+| 7    | shape初始化                  | qcanvas.qshape.shape(..options)                              | qcanvas.shape(..options)                                     |
+| 8    | polygon初始化                | qcanvas.qpolygon.polygon(...options)                         | qcanvas.polygon(...options)                                  |
+| 9    | spirit初始化                 | qcanvas.qspirit.spirit(...options)                           | qcanvas.spirit(...options)                                   |
+| 10   | layer初始化                  | qcanvas.qlayer.layer(...options)                             | qcanvas.layer(...options)                                    |
+| 11   | group初始化                  | qcanvas.qgroup.group(...options)                             | qcanvas.group(...options)                                    |
+| 12   | quadraticCurve二次曲线初始化 | qcanvas.qquadraticCurve.quadraticCurve(...options)           | qcanvas.quadraticCurve(...options)                           |
+| 13   | bezierCurve三次曲线初始化    | qcanvas.qbezierCurve.bezierCurve(...options)                 | qcanvas.bezierCurve(...options)                              |
+| 14   | animation初始化              | qcanvas.qanimation.animate(...options)                       | qcanvas.animate(...options)                                  |
+
+
 
 基础功能的开发计划  
 Qcanvas主类 随时完善  
@@ -75,7 +100,7 @@ set类方法
 >
 > 使用script标签直接引用
 
-Qcanvas整体架构图
+Qcanvas1.x整体架构图
 
 ![newjg](assets/newjg.png)
 
