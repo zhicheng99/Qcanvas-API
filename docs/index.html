@@ -756,8 +756,108 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qcanvas-api-v10">Qcanvas API v1.0</h1>
+                                <h1 id="qcanvas-api-v1x">Qcanvas API v1.x</h1>
 <p>Qcanvas API&#x8BF4;&#x660E;&#x6587;&#x6863;</p>
+<p>2021-09-06 Qcanvas 2.0&#x521D;&#x7248;&#x5DF2;&#x7ECF;&#x5F00;&#x53D1;&#x5B8C;&#x6BD5;, &#x529F;&#x80FD;&#x4FDD;&#x6301;&#x548C;1.x&#x7684;&#x540C;&#x6B65;&#xFF0C;&#x6B7B;&#x4E86;&#x4E0D;&#x5C11;&#x8111;&#x7EC6;&#x80DE;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x57FA;&#x4E8E;1.x&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x82B1;&#x8D39;&#x65F6;&#x95F4;&#x5C11;&#x4E00;&#x70B9;&#xFF0C;&#x5927;&#x7EA6;&#x82B1;&#x4E86;40&#x591A;&#x4E2A;&#x5C0F;&#x65F6; &#xFF08;&#x5305;&#x62EC;&#x793A;&#x4F8B;&#x6D4B;&#x8BD5;&#xFF09;&#xFF0C;</p>
+<p>&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/zhicheng99/qcanvas" target="_blank">https://github.com/zhicheng99/qcanvas</a></p>
+<p>&#x6CE8;&#xFF1A;v1.x&#x4EE5;&#x540E;&#x4E0D;&#x518D;&#x589E;&#x52A0;&#x65B0;&#x529F;&#x80FD;   </p>
+<p>&#x4E24;&#x4E2A;&#x7248;&#x672C;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x5982;&#x4E0B;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x533A;&#x522B;&#x70B9;</th>
+<th>v1.x</th>
+<th>v2.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>&#x753B;&#x5E03;&#x521D;&#x59CB;&#x5316;</td>
+<td>new Qcanvas([&quot;qcanvas&quot;,300,200]);            &#x6216;            <br>new Qcanvas({                <br>id:&apos;qcanvas&apos;,<br>                width:300,<br>                height:200<br>            })</td>
+<td>new Qcanvas({                id:&apos;qcanvas&apos;,<br>                width:300,<br>                height:200<br>            })</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&#x7EBF;&#x6BB5;&#x5B9E;&#x59CB;&#x5316;</td>
+<td>qcanvas.qline.line(...options)</td>
+<td>qcanvas.line(...options)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>&#x77E9;&#x5F62;&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qrect.rect(...options)</td>
+<td>qcanvas.rect(...options)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&#x5706;&#x521D;&#x5316;</td>
+<td>qcanvas.qarc.arc(..options)</td>
+<td>qcanvas.arc(..options)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>&#x56FE;&#x7247;&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qimg.img(..options)</td>
+<td>qcanvas.img(..options)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>&#x6587;&#x5B57;&#x521D;&#x5316;</td>
+<td>qcanvas.qtext.text(...options)</td>
+<td>qcanvas.text(...options)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>shape&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qshape.shape(..options)</td>
+<td>qcanvas.shape(..options)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>polygon&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qpolygon.polygon(...options)</td>
+<td>qcanvas.polygon(...options)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>spirit&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qspirit.spirit(...options)</td>
+<td>qcanvas.spirit(...options)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>layer&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qlayer.layer(...options)</td>
+<td>qcanvas.layer(...options)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>group&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qgroup.group(...options)</td>
+<td>qcanvas.group(...options)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>quadraticCurve&#x4E8C;&#x6B21;&#x66F2;&#x7EBF;&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qquadraticCurve.quadraticCurve(...options)</td>
+<td>qcanvas.quadraticCurve(...options)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>bezierCurve&#x4E09;&#x6B21;&#x66F2;&#x7EBF;&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qbezierCurve.bezierCurve(...options)</td>
+<td>qcanvas.bezierCurve(...options)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>animation&#x521D;&#x59CB;&#x5316;</td>
+<td>qcanvas.qanimation.animate(...options)</td>
+<td>qcanvas.animate(...options)</td>
+</tr>
+</tbody>
+</table>
 <p>&#x57FA;&#x7840;&#x529F;&#x80FD;&#x7684;&#x5F00;&#x53D1;&#x8BA1;&#x5212;<br>Qcanvas&#x4E3B;&#x7C7B; &#x968F;&#x65F6;&#x5B8C;&#x5584;<br>&#x5143;&#x7D20;&#x7C7B;</p>
 <blockquote>
 <p>Qline&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;<br>Qtext&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;<br>Qrect&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;<br>Qarc&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;<br>Qpolygon&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;<br>Qshape&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;<br>Qimg&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;<br>Qspirit&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;<br>QquadraticCurve&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;<br>QbezierCurve&#x7C7B; &#x57FA;&#x672C;&#x529F;&#x80FD;&#x5B8C;&#x6210;</p>
@@ -819,10 +919,10 @@ text.setColor(&apos;red&apos;).setText(&apos;hello world&apos;);</p>
 <h5 id="&#x65B9;&#x6CD5;&#x4E8C;">&#x65B9;&#x6CD5;&#x4E8C;</h5>
 <p>&#x4F7F;&#x7528;script&#x6807;&#x7B7E;&#x76F4;&#x63A5;&#x5F15;&#x7528;</p>
 </blockquote>
-<p>Qcanvas&#x6574;&#x4F53;&#x67B6;&#x6784;&#x56FE;</p>
-<p><a href="assets/newjg.png" data-lightbox="0bb29def-d50a-42e4-b92a-82a11beafc7f" data-title="newjg"><img src="assets/newjg.png" alt="newjg"></a></p>
+<p>Qcanvas1.x&#x6574;&#x4F53;&#x67B6;&#x6784;&#x56FE;</p>
+<p><a href="assets/newjg.png" data-lightbox="bd6c660c-1bb2-4c69-9e5f-6ba7ea96cbc5" data-title="newjg"><img src="assets/newjg.png" alt="newjg"></a></p>
 <footer class="page-footer"><span class="copyright">&#xA9; Qcanvas all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2021-07-29 20:59:38
+2021-09-06 22:25:52
 </span></footer>
                                 
                                 </section>
@@ -862,7 +962,7 @@ text.setColor(&apos;red&apos;).setText(&apos;hello world&apos;);</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Qcanvas说明","level":"1.1","depth":1,"next":{"title":"Qcanvas类","level":"1.2","depth":1,"path":"qcanvas.md","ref":"qcanvas.md","articles":[{"title":"属性","level":"1.2.1","depth":2,"path":"qcanvas/shu-xing.md","ref":"qcanvas/shu-xing.md","articles":[]},{"title":"方法","level":"1.2.2","depth":2,"path":"qcanvas/fang-fa.md","ref":"qcanvas/fang-fa.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor","code","lightbox"],"styles":{"website":"example/style/website.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas V1.0使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas V1.0使用文档","output.name":"Qcanvas V1.0使用文档","gitbook":"*","description":"Qcanvas V1.0使用文档"},"file":{"path":"README.md","mtime":"2021-07-29T12:59:38.883Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-21T07:05:03.602Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Qcanvas说明","level":"1.1","depth":1,"next":{"title":"Qcanvas类","level":"1.2","depth":1,"path":"qcanvas.md","ref":"qcanvas.md","articles":[{"title":"属性","level":"1.2.1","depth":2,"path":"qcanvas/shu-xing.md","ref":"qcanvas/shu-xing.md","articles":[]},{"title":"方法","level":"1.2.2","depth":2,"path":"qcanvas/fang-fa.md","ref":"qcanvas/fang-fa.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","tbfed-pagefooter","sidebar-style","auto-scroll-table","code-editor","code","lightbox"],"styles":{"website":"example/style/website.css"},"pluginsConfig":{"sidebar-style":{"author":"志成","title":"Qcanvas V1.0使用文档"},"tbfed-pagefooter":{"copyright":"&copy Qcanvas","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code-editor":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lizhicheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qcanvas V1.0使用文档","output.name":"Qcanvas V1.0使用文档","gitbook":"*","description":"Qcanvas V1.0使用文档"},"file":{"path":"README.md","mtime":"2021-09-06T14:25:52.417Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-06T14:27:59.092Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
