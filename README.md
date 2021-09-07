@@ -1,8 +1,8 @@
-# Qcanvas API v1.x
 
-Qcanvas API说明文档
 
-2021-09-06 Qcanvas 2.0初版已经开发完毕, 功能保持和1.x的同步，死了不少脑细胞，因为是基于1.x的，所以花费时间少一点，大约花了40多个小时 （包括示例测试），
+# Qcanvas v2.0
+
+2021-09-06 Qcanvas 2.0初版已经开发完毕, 功能保持和1.x的同步，死了不少脑细胞，因为是基于1.x的，所以花费时间少一点，大约花了40多个小时 （包括示例测试）.
 
 地址：https://github.com/zhicheng99/qcanvas
 
@@ -28,6 +28,10 @@ Qcanvas API说明文档
 | 14   | animation初始化              | qcanvas.qanimation.animate(...options)                       | qcanvas.animate(...options)                                  |
 
 
+
+# Qcanvas API v1.x
+
+Qcanvas API说明文档
 
 基础功能的开发计划  
 Qcanvas主类 随时完善  
