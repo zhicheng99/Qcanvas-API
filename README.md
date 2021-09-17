@@ -26,7 +26,7 @@
 | 12   | quadraticCurve二次曲线初始化 | qcanvas.qquadraticCurve.quadraticCurve(...options)           | qcanvas.quadraticCurve(...options)                           |
 | 13   | bezierCurve三次曲线初始化    | qcanvas.qbezierCurve.bezierCurve(...options)                 | qcanvas.bezierCurve(...options)                              |
 | 14   | animation初始化              | qcanvas.qanimation.animate(...options)                       | qcanvas.animate(...options)                                  |
-| 15   | 元素拾取算法                 | 线、圆都是边线逻列成多个点的闭合区域来实现的，拾取有不准确的情况 | 基于影子画布来实现 拾取更加准确                              |
+| 15   | 元素拾取算法                 | 线、圆都是边线取多个点的生成闭合区域来实现的，拾取有不准确的情况 | 基于影子画布来实现 拾取更加准确                              |
 
 
 
