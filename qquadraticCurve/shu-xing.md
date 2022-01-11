@@ -24,6 +24,7 @@
 | 22   | withTextId             | Number         | 否                   | 通过withText生成的文本对象id (如果配置了withText，会自动生成该属性) |
 | 23   | dblclick               | Fun            | 否                   | 事件                                                         |
 | 24   | handlerShow            | Boolean        | 否                   | 是否显示控制点                                               |
+| 25   | antLine                | Boolean/Object | 否                   | 蚂蚁线动画效果（注：只对虚线形式起作用）<br />//也可以配置为对象<br/>        //{<br/>        //step:0.5, 调整动画的速度<br/>        //reverseDirection:false   调整方向<br/>        //} |
 
 > ##### 1、qquadraticCurveVersion\(String\)
 >

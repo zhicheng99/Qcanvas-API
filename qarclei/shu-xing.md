@@ -24,6 +24,7 @@
 22|like|String|否|边线的样式（'-':实线 '--':虚线）
 23|dragRange|Array|否|限制拖动的区域(限制start的值) 必须为两个坐标点[[左上角x,左上角y]，[右下角x,右下角y]]
 24| mouseenter | Fun | 否 | 事件 
+25| antLine | Boolean/Object | 否 | 蚂蚁线动画效果（注：只对虚线形式起作用）<br />//也可以配置为对象<br/>        //{<br/>        //step:0.5, 调整动画的速度<br/>        //reverseDirection:false   调整方向<br/>        //} 
 
 
 
